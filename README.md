@@ -16,8 +16,8 @@ assert hamlet_alive == False, "Hamlet should be dead by Act V"
 assert 'revenge' in macbeth_themes, "Macbeth must contain revenge"  
 ````
 
-## Conceptual Framework (Four Acts)  
-= ***What to explore & why*** : the narrative arc from stage to spreadsheet, from plot points to data points  
+## Conceptual Framework    
+= ***What to explore & why*** : the narrative arc in four acts from stage to spreadsheet, from plot points to data points  
 #### **Part I - The Shakespearean Death Map**  
 Every tragedy is a dataset of human error.  
 Deaths, betrayals and suicides are logged like failed test cases :  
@@ -57,16 +57,16 @@ and dynamic heatmaps that make sin measurable.
 Automated extraction of deaths, cross-checking transgressions.  
 Flaky data mirrors human inconsistency.  
 
+```
+🕯️ Shadows of fate in every node
+```
+
 ## Tech Stack & Skills
 - **Python / Jupyter / Pandas / NetworkX / Plotly / Dash / Folium**  
 - **NLP / Text Mining / Regex / NER**  
 - **QA / Data Testing / Flakiness / Pipelines**  
 - **Git / GitHub / Versioning**  
 - Digital Humanities / Literary Analysis / Comparative Literature
-
-```
-🕯️ Shadows of fate in every node
-```
 
 ## Structure & Storytelling
 ├── 📁 data/         
@@ -80,7 +80,7 @@ Flaky data mirrors human inconsistency.
 ├── 📁 security/ → Plague, virus, firewall, bugs, quarantine, corrupted_commits  
 └── requirements.txt → litany of dependencies needed to keep tragedy reproducible
   
-### Artifacts of the Stage
+## Artifacts of the Stage
 
 ***Each variable whispers a story, a ghost in the machine.***  
 | variable                | type | description                                   | dramatic_annotation                           |
