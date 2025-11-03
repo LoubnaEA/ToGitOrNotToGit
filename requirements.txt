@@ -1,0 +1,24 @@
+# ToGitOrNotToGit
+# Litany of dependencies
+
+# Python environment to resurrect Shakespearean tragedies as datasets
+
+# Core Python tools
+pandas
+numpy
+
+# Data visualization
+plotly
+dash
+folium
+
+# Text analysis / NLP
+spacy
+nltk
+
+# Graph & network analysis
+networkx
+py2neo
+
+# QA / testing
+pytest
