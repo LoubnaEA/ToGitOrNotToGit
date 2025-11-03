@@ -1,0 +1,74 @@
+# ToGitOrNotToGit
+# Git & Repo Setup Guide
+
+A concise guide to :
+- Installing Git
+- Linking a local repo to GitHub
+- Organizing project folders
+
+---
+
+1️⃣ Install Git
+Download and install : https://git-scm.com/download/win
+Verify installation :
+  
+ git --version
+
+2️⃣ Configure Git
+Set global identity :
+
+  git config --global user.name "Your Name"
+  git config --global user.email "you@example.com"
+
+3️⃣ Prepare Local Project Folder
+Create a main project folder anywhere you like.
+Create subfolders :
+
+  $root = "C:\Path\To\Your\Project"
+  $folders = @(
+      "$root\data\raw",
+      "$root\data\processed",
+      "$root\data\metadata",
+      "$root\notebooks",
+      "$root\scripts",
+      "$root\visuals",
+      "$root\references",
+      "$root\security"
+  )
+  foreach ($folder in $folders) {
+      New-Item -ItemType Directory -Path $folder -Force
+  }
+
+- Add `.gitkeep` to empty folders so Git tracks them:
+  New-Item -Path ".\data\raw\.gitkeep" -ItemType File
+
+4️⃣ Initialize Git Repository
+
+  git init
+
+5️⃣ Link to Remote Repository
+
+  git remote add origin https://github.com/username/RepoName.git
+  git branch -M main
+  git pull origin main --allow-unrelated-histories
+
+6️⃣ Add, Commit & Push Files
+
+  git add .
+  git commit -m "Initial commit with folders and placeholder files"
+  git push -u origin main
+
+7️⃣ Daily Workflow
+Pull updates : git pull origin main
+Stage & commit changes :
+
+    git add <filename>
+    git commit -m "Describe change"
+    git push
+
+8️⃣ Note
+- Use git status often
+- Keep `.gitkeep` in empty folders
+- Maintain `requirements.txt` for dependencies
+- Follow steps in order for reproducible setup
+
