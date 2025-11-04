@@ -1,14 +1,14 @@
 # ToGitOrNotToGit
 ***That is the commit question !*** 💀
 
-Exploring Death, Taboo and Transgression in Elizabethan & Jacobean Drama, with a dash of Data, QA and Git. 
+Exploring Death, Taboo and Transgression in Elizabethan & Jacobean Drama.  
 
 ---
 
 ## 🎭 A Prelude to the Dark Stage
 Who dies most brutally ? Who betrays, lusts or falls victim to fate’s cruel algorithm ?  
 **`ToGitOrNotToGit 💀`** is a **hybrid literary-data laboratory** : part ***digital humanities***, part ***QA-inspired analysis***, part ***literary essay***.      
-intellectually rigorous yet playfully transgressive, it dissects how the Elizabethan and Jacobean stage encoded its own fatal bugs. 
+Intellectually rigorous yet playfully transgressive, it dissects how the Elizabethan and Jacobean stage encoded its own fatal bugs.   
 Here, revenge is a recursive function ! Lust a corrupted variable ! Death the only assert that never fails, all revealed through the 🕯️of **data, networks and digital storytelling**.
 
 ```python
@@ -17,7 +17,7 @@ assert 'revenge' in macbeth_themes, "Macbeth must contain revenge"
 ````
 
 ## Conceptual Framework    
-= ***What to explore & why*** : the narrative arc in four acts from stage to spreadsheet, from plot points to data points  
+= ***What to explore & why*** : the narrative arc in Four Acts from stage to spreadsheet, from plot points to data points  
 #### **Part I - The Shakespearean Death Map**  
 Every tragedy is a dataset of human error.  
 Deaths, betrayals and suicides are logged like failed test cases :  
@@ -44,7 +44,7 @@ echoes of Ford reappearing in modern adaptations.
 A continuous integration of the macabre.
 
 ## Tech & Data Lab 
- = ***How to explore it*** : tools and pipelines to transform texts into datasets, networks, visualizations, QA-checked analyses.  
+ = ***How to explore it*** : tools and pipelines to transform texts into datasets, networks, visualizations, QA-checked analyses    
 #### Digital Humanities & Text Analytics  
 Named Entity Recognition becomes a resurrection ritual :  
 each token a fragment of memory, each entity a ghost tagged for analysis.  
@@ -75,19 +75,51 @@ Flaky data mirrors human inconsistency.
 │   └── metadata/ → dramatis personae of sin : characters, themes, dates  
 ├── 📁 notebooks/ → hypotheses meet performance ; each EDA a small act of resurrection  
 ├── 📁 scripts/ → *All the world’s a stage… and we are but scripts in a repository of sins*  
-├── 📁 visuals/ → the cartography of the forbidden: heatmaps of guilt, timelines of decay  
+├── 📁 visuals/ → the cartography of the forbidden : heatmaps of guilt, timelines of decay  
 ├── 📁 references/ → scholars, critics, ghosts of commentary  
-├── 📁 security/ → Plague, virus, firewall, bugs, quarantine, corrupted_commits  
-└── requirements.txt → litany of dependencies needed to keep tragedy reproducible
+├── 📁 security/ → Plague, virus, firewall, bugs, quarantine, corrupted_commits   
+├── *.md  → public scripts and stage directions for the digital audience   
+└── *.txt → backstage notes, raw drafts and litany of dependencies to keep tragedy reproducible  
   
-## Artifacts of the Stage
+## Artifacts of the Stage  
 
-***Each variable whispers a story, a ghost in the machine.***  
+***Feature : Shakespearean Fate***  
+```gherkin
+Scenario: Hamlet tries to escape death
+  Given Hamlet is alive
+  When he attempts to Ctrl+Z his fate
+  Then he shall die anyway
+
+Scenario: Macbeth is corrupted by ambition
+  Given Macbeth hears the witches' prophecy
+  When he plots regicide
+  Then he fails to pass QA of morality and dies
+
+Scenario: Ophelia succumbs to despair
+  Given Ophelia is grieving
+  When human error overwhelms her
+  Then she drowns despite any intervention
+```
+
+***Euphues.ly***  
+```python
+def moral_temptation(choice):
+    if choice.lower() == "corrupt":
+        return "💀 Morality test failed"
+    else:
+        return "🌿 Virtue persists"
+        
+if __name__ == "__main__":
+    print(moral_temptation("corrupt"))
+```
+
+***Each variable whispers a story, a ghost in the machine***   
 | variable                | type | description                                   | dramatic_annotation                           |
 | ----------------------- | ---- | --------------------------------------------- | --------------------------------------------- |
-| `incest`                | bool | Yes / No                                      | *Forbidden intimacy encoded as boolean truth* |
 | `revenge`               | bool | Yes / No                                      | *Recursion of grief into action*              |
 | `torture`               | bool | Yes / No                                      | *Physical debugging of the human soul*        |
+| `betrayal`              | bool | Yes / No                                      | *Trust fails QA checks*                       |
+| `suicide`               | bool | Yes / No                                      | *Final assert that never passes*              |
 | `sexual_transgression`  | bool | Includes adultery, incest, forbidden desire   | *Desire exceeding design limits*              |
 | `supernatural_or_ghost` | bool | Presence of spirits, ghosts, curses           | *Memory leaks from beyond*                    |
 
