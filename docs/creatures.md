@@ -2,7 +2,7 @@
 
 ### ✨ Characters of the English Renaissance Stage
 
-From **1558 to 1642**, the English stage teemed with life, from noble heroes and star-crossed lovers to scheming villains and spectral apparitions.  
+From **1558** to **1642**, the English stage teemed with life, from noble heroes and star-crossed lovers to scheming villains and spectral apparitions.  
 These **creatures** are the living embodiments of the playwrights’ moral, political and psychological preoccupations.  
 
 The `creatures.md` dataset constitutes the dramatic counterpart to `creators.md`, focusing on the characters that populate Renaissance drama.  
