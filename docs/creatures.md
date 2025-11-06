@@ -69,6 +69,6 @@ These columns remain optional or expandable fields for advanced or derived analy
 
 ---
 
-`creators.md` → who writes   
-`creatures.md` → who acts   
-`dark_stage.md` → where transgression unfolds   
+🎭 `creators.md` → who writes   
+✨ `creatures.md` → who acts   
+🗣️ `dark_stage.md` → where transgression unfolds   
