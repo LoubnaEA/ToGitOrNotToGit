@@ -86,3 +86,8 @@ This table serves as the **metadata layer** for **author-to-character relationsh
 *🪶 Writing/Satire = Producing and challenging knowledge 
 
 ---
+
+🎭 creators.md → who writes  
+✨ creatures.md → who acts  
+🗣️ dark_stage.md → where transgression unfolds  
+
