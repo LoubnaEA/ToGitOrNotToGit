@@ -1,5 +1,8 @@
 # *Narrative Queries*
 
+> **Part IV - Digital Afterlife**  
+> Focus : Exploratory and analytical queries linking `creators.md`, `creatures.md` and `dark_stage.md` incidents ; network, temporal and comparative analysis.
+
 ### 🛋️ Have a sit
 
 This document lists **exploratory and analytical queries** for the three core datasets (`creators.md`, `creatures.md`, `dark_stage.md`).    
