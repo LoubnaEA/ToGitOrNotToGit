@@ -11,7 +11,7 @@ Each record captures a **personal, professional or theatrical anecdote**, offeri
 * **Content :** Rivalries, duels, censorship, collaborations, scandals, witty repartees
 * **Unit of analysis :** One anecdote, incident per row
 * **Purpose :** Reveal the **human drama offstage**, showing how ambition, envy and wit influenced plays, collaborations, literary history
-* **Relational scope :** Linked to `Author_ID`, `Play_ID`, optionally `Creature_ID` when incidents involve characters
+* **Relational scope :** Linked to `author_id`, `play_id`, optionally `creature_id` when incidents involve characters
 
 This dataset is a **lens on personality, networks and social interplay**.   
 Complementing `creators.md` and `creatures.md` by highlighting **the intrigues that fueled the Renaissance theatre ecosystem**.
@@ -22,22 +22,22 @@ From whispered betrayals to public spats, showing that **the drama offstage was 
 
 ### 🗣️ Columns Guide
 
-- **Author_ID**, the dramatist involved, linked to `creators.md`  
-- **Play_ID**, the play concerned (if applicable)  
-- **Creature_ID**, the character involved, unwitting actor in the backstage drama  
-- **Incident_Type**, the nature of chaos :  
+- **author_id**, the dramatist involved, linked to `creators.md`  
+- **play_id**, the play concerned (if applicable)  
+- **creature_id**, the character involved, unwitting actor in the backstage drama  
+- **incident_type**, the nature of chaos :  
     - Rivalry, Duel, Censorship, Collaboration, Scandal, Witty Repartée, etc.  
-- **Anecdote**, the juicy story :    
+- **anecdote**, the juicy story :    
     - Duels, Betrayals, Quips, Literary Feuds, etc.  
-- **Intensity**, scale of impact, measuring drama magnitude :  
+- **intensity**, scale of impact, measuring drama magnitude :  
     - Minor, Notable, Epic, etc.  
-- **Sentiment**, the emotional or moral undertone :
+- **sentiment**, the emotional or moral undertone :
     - `jealousy`, `grudge`, `admiration`, `humiliation`, `cunning`, `romantic_intrigue`, etc.   
-- **Stage_Mood**, expressive emoji highlighting the gossip (😏😡🤫...)  
-- **Period**, approximate year or range, situating the scandal in time  
-- **Location**, where it happened, the stage of backstage drama :  
+- **stage_mood**, expressive emoji highlighting the gossip (😏😡🤫...)  
+- **period**, approximate year or range, situating the scandal in time  
+- **location**, where it happened, the stage of backstage drama :  
   - Theatre, Tavern, Royal Court, etc.  
-- **Notes**, sources, critical references, commentary, backing up the tale
+- **notes**, sources, critical references, commentary, backing up the tale
 
 
 ### 🗣️ Dataset
