@@ -18,25 +18,25 @@ assert 'revenge' in macbeth_themes, "Macbeth must contain revenge"
 
 ## Conceptual Framework    
 = ***What to explore & why*** : the narrative arc in Four Acts from stage to spreadsheet, from plot points to data points  
-#### **Part I - The Shakespearean Death Map**  
+> #### **Part I - The Shakespearean Death Map**  
 Every tragedy is a dataset of human error.  
 Deaths, betrayals and suicides are logged like failed test cases :  
 `bloodlust`, `revenge`, `betrayal` become binary fields,  
 and each play yields its own QA report of moral collapse.  
 
-#### **Part II - The Jacobean & Elizabethan Edge**  
+> #### **Part II - The Jacobean & Elizabethan Edge**  
 The later stage grows darker,  
 as if the moral constraints of Elizabeth’s reign had been versioned into obsolescence.  
 Taboos cascade unchecked, violence runs in loops,  
 and the dramaturgical system groans under its own excess.  
 
-#### **Part III - Mapping the Taboo**  
+> #### **Part III - Mapping the Taboo**  
 A taxonomy of transgression emerges : religion, morality, desire, disease.  
 Each entry a node in a *Taboo Atlas*, each dataset a confession.  
 Where the Elizabethan script feared divine punishment,  
 the Jacobean one debugged guilt itself.  
 
-#### **Part IV - Digital Afterlife**  
+> #### **Part IV - Digital Afterlife**  
 From stage to spreadsheet, from verse to version control.  
 The lineage of influence flows through branches and merges,  
 ghosts of Marlowe haunting Shakespeare’s commits,  
