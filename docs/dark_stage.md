@@ -1,4 +1,7 @@
-# *The Dark Stage*
+# *The Dark Stage*  
+
+> **Part III - Mapping the Taboo**   
+> Focus : Taxonomy of transgression, social and moral networks, backstage rivalries and scandal.  
 
 ### 🗣️ Secrets, Scandals & Stage Intrigue
 
