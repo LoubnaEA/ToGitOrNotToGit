@@ -23,47 +23,45 @@ A flexible framework adaptable to database, graph, visualization models.
 
 ### ✨ Columns
 
-#### Core Columns (20)
+#### Core Columns (21)
 
-- **Character**, aka Creature, primary identifier of the dramatic persona
-- **Author**, linked to the corresponding `Author_ID` in `creators.md`    
-- **Play**, title of the dramatic work in which the character appears (`Play_ID`)   
-- **Category / Dramatic Function**, (5) structural role in the narrative : 
+- **character**, aka Creature, primary identifier of the dramatic persona
+- **author**, linked to the corresponding `Author_ID` in `creators.md`    
+- **play**, title of the dramatic work in which the character appears (`Play_ID`)   
+- **dramatic_function**, (5) structural role in the narrative : 
     - Protagonist, Villain, Transgressor, Outcast / Marginal, Symbolic / Metaphysical Figure 
-- **Archetype / Subtype**, (9) dramatic lineage :
+- **archetype**, (9) dramatic lineage :
     - The Tragic Hero, The Innocent Victim, The Machiavel, The Revenger, The Tempter / Sorcerer, The Fool, The Witch, Death, Fate  
-- **Dominant Traits**, core moral and psychological attributes
+- **dominant_traits**, core moral and psychological attributes, often few in number and highly significant
     - `ambition`, `lust`, `deceit`, `guilt`, etc.      
-- **Variables / Metadata** :
+- **variables**, a broader, dynamic and descriptive list, encompassing various analytical and contextual facets surrounding the character  
     - `ambition`, `revenge`, `betrayal`, etc.
-- **Gender** : 
+- **gender** : 
   	- Male, Female, Other              
-- **Social Status** :
+- **social_status** :
   	- Noble, Commoner, Servant, Marginal, Supernatural     
-- **Human / Other**, distinguishes mortal from spectral, allegorical or divine entities      
-- **Visual Motifs**, set of symbolic emojis from the shared legend (🎭👑💀🩸🗡️🔥🕷️…)       
-- **Number of Characters in Play**, contextual density of the dramatic environment                  
-- **Role Importance / Stage Time**, relative narrative weight
+- **human_or_not**, distinguishes mortal from spectral, allegorical or divine entities      
+- **visual_motifs**, set of symbolic emojis from the shared legend (🎭👑💀🩸🗡️🔥🕷️…)       
+- **number_of_characters_in_play**, contextual density of the dramatic environment                  
+- **role_importance**, relative narrative weight
     - Central, Secondary, Chorus, etc.         
-- **Interacts With**, primary relational links within the play (characters, factions or pairs)        
-- **Speech Length / Lines Count**, quantitative indicator of presence                  
-- **Death Status**, fate of the character :
+- **interacts_with**, primary relational links within the play (characters, factions or pairs)        
+- **speech_length**, quantitative indicator of presence                  
+- **death_status**, fate of the character :
     - Survives, Dies, Transformed, Unknown
-- **Costume Description / Props**, stage appearance and symbolic material culture
-- **Introduction Scene / Act**, narrative positioning of first entry
-- **Gender Performance**, cross-dressing, disguise or fluid identity performance
-- **Moral Alignment**, ethical position within the narrative world
+- **costume_props**, stage appearance and symbolic material culture
+- **introduction_scene**, narrative positioning of first entry, for structural mapping and act-based analytics    
+- **gender_performance**, cross-dressing, disguise or fluid identity performance
+- **moral_alignment**, ethical position within the narrative world
     - Virtuous, Ambivalent, Corrupt, etc.
+- **notes**
 
-#### Reserve Columns (5)
+#### Reserve Columns (3)
 These columns remain optional or expandable fields for advanced or derived analysis :
 
-- **Interacts With**, expanded network relationships or graph edges          
-- **Speech Length / Lines Count**, detailed metrics (e.g. lines spoken, acts present)     
-- **Death Status**, encoded categorical outcome (e.g. `0=alive`, `1=dead`)
-- **Costume Description / Props**, for visual analysis or performance studies     
-- **Introduction Scene / Act**, for structural mapping and act-based analytics     
-
+- **interacts_with**, expanded network relationships or graph edges          
+- **speech_length**, detailed metrics (e.g. lines spoken, acts present)     
+- **death_status**, encoded categorical outcome (e.g. `0=alive`, `1=dead`) 
 
 ### ✨ Dataset
 
