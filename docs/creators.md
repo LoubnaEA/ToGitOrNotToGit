@@ -1,5 +1,8 @@
 # *The Creators*  
 
+> **Part I - The Shakespearean Death Map**  
+> Focus : Core dramatists of the English Renaissance, linking creators to their moral, political and theatrical preoccupations
+
 ### 🎭 Elizabethan, Jacobean & Caroline Dramatists Overview  
 
 Between **1558** and **1642**, English theatre flourished under the reigns of **Elizabeth I**, **James I** and **Charles I**.  
@@ -90,4 +93,5 @@ This table serves as the **metadata layer** for **author-to-character relationsh
 🎭 creators.md → who writes  
 ✨ creatures.md → who acts  
 🗣️ dark_stage.md → where transgression unfolds  
+
 
