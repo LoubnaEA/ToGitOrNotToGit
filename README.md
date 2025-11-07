@@ -73,6 +73,7 @@ Flaky data mirrors human inconsistency.
 │   ├── raw/ → unfiltered tragedies, uncleaned, unrepentant  
 │   ├── processed/ → refined datasets, every death is normalized  
 │   └── metadata/ → dramatis personae of sin : characters, themes, dates  
+├── 📁 docs/ → where narrative and data converge  
 ├── 📁 notebooks/ → hypotheses meet performance ; each EDA a small act of resurrection  
 ├── 📁 scripts/ → *All the world’s a stage… and we are but scripts in a repository of sins*  
 ├── 📁 visuals/ → the cartography of the forbidden : heatmaps of guilt, timelines of decay  
@@ -117,9 +118,7 @@ if __name__ == "__main__":
 | variable                | type | description                                   | dramatic_annotation                           |
 | ----------------------- | ---- | --------------------------------------------- | --------------------------------------------- |
 | `revenge`               | bool | Yes / No                                      | *Recursion of grief into action*              |
-| `torture`               | bool | Yes / No                                      | *Physical debugging of the human soul*        |
 | `betrayal`              | bool | Yes / No                                      | *Trust fails QA checks*                       |
-| `suicide`               | bool | Yes / No                                      | *Final assert that never passes*              |
 | `sexual_transgression`  | bool | Includes adultery, incest, forbidden desire   | *Desire exceeding design limits*              |
 | `supernatural_or_ghost` | bool | Presence of spirits, ghosts, curses           | *Memory leaks from beyond*                    |
 
