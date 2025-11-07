@@ -1,5 +1,8 @@
 # *The Creatures*  
 
+> **Part II - The Jacobean & Elizabethan Edge**  
+> Focus : Characters and archetypes, from protagonists to spectral figures, embodying creators’ narrative intentions.  
+
 ### ✨ Characters of the English Renaissance Stage
 
 From **1558** to **1642**, the English stage teemed with life, from noble heroes and star-crossed lovers to scheming villains and spectral apparitions.  
