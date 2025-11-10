@@ -4,7 +4,6 @@
 > Focus : Taxonomy of transgression, social and moral networks, backstage rivalries and scandal.  
 
 ### 🗣️ Secrets, Scandals & Stage Intrigue
-
 Behind the grand curtains of the stage, the playwrights were not only chroniclers of human folly, they were its participants.  
 The `dark_stage.md` collects the **juicy, behind-the-scenes stories, rivalries and literary feuds** that shaped Elizabethan, Jacobean and Caroline drama.
 
@@ -24,7 +23,6 @@ From whispered betrayals to public spats, showing that **the drama offstage was 
 
 
 ### 🗣️ Columns Guide
-
 - **author_id**, the dramatist involved, linked to `creators.md`  
 - **play_id**, the play concerned (if applicable)  
 - **creature_id**, the character involved, unwitting actor in the backstage drama  
@@ -41,6 +39,73 @@ From whispered betrayals to public spats, showing that **the drama offstage was 
 - **location**, where it happened, the stage of backstage drama :  
   - Theatre, Tavern, Royal Court, etc.  
 - **notes**, sources, critical references, commentary, backing up the tale
+
+
+### 🗣️ Tension Diagrams
+Not all authors appear on these stages. Those absent from the diagrams include : **Lyly**, **Peele**, **Heywood**, **Fletcher**, **Ford**. Their intrigues subtler, their feuds less scandalous.  
+
+```mermaid
+graph LR
+    %% Nashe & Harvey, Massinger & Shirley
+    Nashe["Nashe"]
+    Harvey["Harvey"]
+    Massinger["Massinger"]
+    Shirley["Shirley"]
+
+    %% Nashe ↔ Harvey
+    Nashe -->| pamphlet war| Harvey
+    Harvey -->| rebuttals / satire| Nashe
+
+    %% Massinger ↔ Shirley
+    Massinger -->| literary grudges| Shirley
+    Shirley -->| retaliation / satire| Massinger
+```
+```mermaid
+graph LR
+    %% Rowley, Webster, Beaumont
+    Rowley["Rowley"]
+    Webster["Webster"]
+    Beaumont["Beaumont"]
+
+    %% Rivalries / interactions
+    Rowley -->| lampoons / sabotage| Webster
+    Webster -->| plot raiding / rivalry| Beaumont
+    Beaumont -->| influence / response| Webster
+```
+```mermaid
+flowchart LR
+    %% War of the Theatres loop
+    Jonson["Jonson"]
+    Marston["Marston"]
+    Dekker["Dekker"]
+
+    Jonson -->|mockery / satire| Marston
+    Marston -->|counter-plays| Dekker
+    Dekker -->|retaliation / jab| Jonson
+```
+```mermaid
+flowchart LR
+    %% Authors involved in major rivalries
+    Shakespeare["Shakespeare"]
+    Jonson["Jonson"]
+    Dekker["Dekker"]
+    Greene["Greene"]
+    Marlowe["Marlowe"]
+    Kyd["Kyd"]
+    Marston["Marston"]
+    Chapman["Chapman"]
+
+    %% Rivalries / Feuds
+    Shakespeare -->|rivalry / shade| Jonson
+    Jonson -->|War of Theatres*| Dekker
+    Greene -->|attacked 'upstart crow'| Shakespeare
+    Marlowe -->|possible plagiarism| Shakespeare
+    Kyd -->|victim of Marlowe's shade| Marlowe
+    Marston -->|poet-war| Jonson   
+    Chapman -->|ink-throw feud| Jonson
+```
+
+**The “War of the Theatres” was a battle of quills and pride : **Jonson**, **Marston** and **Dekker** traded theatrical blows, mocking rivals in plays as the city watched.*
 
 
 ### 🗣️ Dataset
