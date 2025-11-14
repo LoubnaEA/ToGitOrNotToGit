@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LoubnaEA/ToGitOrNotToGit/data/metadata/creators_validation.json",
+  "title": "Validation Schema for English Renaissance Playwrights Dataset",
+  "description": "Schema to validate a list of 'Playwright' objects",
+  
+  "type": "array", 
+  "items": {
+    "type": "object",
+    "required": [
+      "Author",
+      "Birth",
+      "Death",
+      "Birthplace",
+      "Period",
+      "Genre",
+      "Major Works",
+      "Style & Themes",
+      "Iconic Creatures",
+      "Visual Motifs",
+      "Relevance",
+      "Notes"
+    ],
+    "properties": {
+      "Author": {
+        "type": "string",
+        "description": "The name of the playwright"
+      },
+      "Birth": {
+        "type": "integer",
+        "description": "Year of birth (must be an integer)"
+      },
+      "Death": {
+        "type": "integer",
+        "description": "Year of death (must be an integer)"
+      },
+      "Birthplace": {
+        "type": "string",
+        "description": "Place of birth"
+      },
+      "Period": {
+        "type": "string",
+        "description": "Literary period(s)"
+      },
+      "Genre": {
+        "type": "string",
+        "description": "Major dramatic genre(s)"
+      },
+      "Major Works": {
+        "type": "string",
+        "description": "Titles of major works (including asterisks for formatting)"
+      },
+      "Style & Themes": {
+        "type": "string",
+        "description": "Summary of style and themes"
+      },
+      "Iconic Creatures": {
+        "type": "string",
+        "description": "Recurring character types"
+      },
+      "Visual Motifs": {
+        "type": "string",
+        "description": "Visual motifs (emojis)"
+      },
+      "Relevance": {
+        "type": "string",
+        "description": "Literary importance"
+      },
+      "Notes": {
+        "type": "string",
+        "description": "Contextual information"
+      }
+    },
+    "additionalProperties": false
+  }
+}
