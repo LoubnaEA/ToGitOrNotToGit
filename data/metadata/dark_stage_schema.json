@@ -1,0 +1,103 @@
+{
+  "dataset_name": "dark_stage",
+  "version": "1.0.0",
+  "description": "Schema for the Dark Stage dataset, documenting rivalries, scandals, feuds, dramatic anecdotes among Elizabethan and Jacobean playwrights",
+  "columns": {
+    "period": {
+      "type": "string",
+      "allowed_values": ["Elizabethan", "Jacobean"],
+      "description": "Historical literary period of the author",
+      "examples": ["Elizabethan"]
+    },
+    "author_id": {
+      "type": "string",
+      "description": "Unique identifier or name of the author",
+      "examples": ["William Shakespeare"]
+    },
+    "style": {
+      "type": "string",
+      "description": "Primary writing style of the author",
+      "examples": ["blank_verse"]
+    },
+    "influence": {
+      "type": "string",
+      "allowed_values": ["global", "regional", "local"],
+      "description": "Impact level of the author",
+      "examples": ["global"]
+    },
+    "death_year": {
+      "type": "integer",
+      "nullable": true,
+      "description": "Year of death, if known",
+      "examples": [1616],
+      "format": "year"
+    },
+    "incident_type": {
+      "type": "string",
+      "description": "Category of event (feud, scandal, plagiarism, gossip, etc.)",
+      "examples": ["literary_feud"]
+    },
+    "anecdote": {
+      "type": "string",
+      "description": "Raw anecdotal description of the event",
+      "examples": ["Robert Greene called him an 'upstart crow'"]
+    },
+    "feud_with": {
+      "type": "string",
+      "nullable": true,
+      "description": "Other author(s) or group involved in the conflict",
+      "examples": ["Robert Greene"]
+    },
+    "notable_rivalry": {
+      "type": "string",
+      "nullable": true,
+      "description": "Short label summarizing the rivalry or dramatic event",
+      "examples": ["Greene's pamphlet war"]
+    },
+    "intensity": {
+      "type": "string",
+      "allowed_values": ["minor", "notable", "epic"],
+      "description": "Severity level of the conflict",
+      "examples": ["notable"]
+    },
+    "sentiment": {
+      "type": "string",
+      "description": "Emotional mood of the event",
+      "examples": ["jealousy"]
+    },
+    "stage_mood": {
+      "type": "string",
+      "description": "Emoji representing theatrical mood surrounding the event",
+      "examples": ["🤫"]
+    },
+    "location": {
+      "type": "string",
+      "nullable": true,
+      "description": "Geographical or contextual location of the incident",
+      "examples": ["London"]
+    },
+    "play_id": {
+      "type": "string",
+      "nullable": true,
+      "description": "If related to a specific play, the play identifier (e.g., 'hamlet')",
+      "examples": ["hamlet"]
+    },
+    "creature_id": {
+      "type": "string",
+      "nullable": true,
+      "description": "Link to a supernatural creature in the 'creatures' dataset",
+      "examples": ["ghost_001"]
+    },
+    "notes": {
+      "type": "string",
+      "nullable": true,
+      "description": "Additional comments or contextual notes",
+      "examples": ["Greene's pamphlet war"]
+    }
+  },
+  "primary_key": ["author_id", "incident_type", "notable_rivalry"],
+  "expected_rows": 80,
+  "expected_rows_note": "Dataset will expand as new anecdotes are added",
+  "source": "Hand-curated dataset created for Dark Stage literary rivalries project",
+  "license": "CC-BY 4.0"
+}
