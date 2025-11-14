@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LoubnaEA/ToGitOrNotToGit/data/metadata/dark_stage_validation.json",
+  "title": "Dark Stage Dataset Row Schema",
+  "description": "Schema to validate a single data row (an anecdote) within the Dark Stage dataset",
+  
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "period": {
+        "description": "Historical literary period of the author",
+        "type": "string",
+        "enum": ["Elizabethan", "Jacobean"]
+      },
+      "author_id": {
+        "description": "Unique identifier or name of the author",
+        "type": "string"
+      },
+      "style": {
+        "description": "Primary writing style of the author",
+        "type": "string"
+      },
+      "influence": {
+        "description": "Impact level of the author",
+        "type": "string",
+        "enum": ["global", "regional", "local"]
+      },
+      "death_year": {
+        "description": "Year of death, if known",
+        "type": ["integer", "null"],
+        "format": "year",
+        "minimum": 1500,
+        "maximum": 1700
+      },
+      "incident_type": {
+        "description": "Category of event (feud, scandal, plagiarism, gossip, etc.)",
+        "type": "string"
+      },
+      "anecdote": {
+        "description": "Raw anecdotal description of the event",
+        "type": "string"
+      },
+      "feud_with": {
+        "description": "Other author(s) or group involved in the conflict",
+        "type": ["string", "null"]
+      },
+      "notable_rivalry": {
+        "description": "Short label summarizing the rivalry or dramatic event",
+        "type": ["string", "null"]
+      },
+      "intensity": {
+        "description": "Severity level of the conflict",
+        "type": "string",
+        "enum": ["minor", "notable", "epic"]
+      },
+      "sentiment": {
+        "description": "Emotional mood of the event",
+        "type": "string"
+      },
+      "stage_mood": {
+        "description": "Emoji representing theatrical mood surrounding the event",
+        "type": "string"
+      },
+      "location": {
+        "description": "Geographical or contextual location of the incident",
+        "type": ["string", "null"]
+      },
+      "play_id": {
+        "description": "If related to a specific play, the play identifier (e.g., 'hamlet')",
+        "type": ["string", "null"]
+      },
+      "creature_id": {
+        "description": "Link to a supernatural creature in the 'creatures' dataset",
+        "type": ["string", "null"]
+      },
+      "notes": {
+        "description": "Additional comments or contextual notes",
+        "type": ["string", "null"]
+      }
+    },
+    
+    "required": [
+      "period",
+      "author_id",
+      "style",
+      "influence",
+      "incident_type",
+      "anecdote",
+      "feud_with",
+      "intensity",
+      "sentiment",
+      "stage_mood"
+    ],
+    "additionalProperties": false
+  }
+}
