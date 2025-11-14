@@ -1,0 +1,84 @@
+{
+  "dataset_name": "creators",
+  "version": "1.0.0",
+  "description": "Schema for documenting key Elizabethan and Jacobean playwrights, focusing on biographical data, major works, style, thematic elements",
+  "columns": {
+    "Author": {
+      "type": "string",
+      "description": "The full name of the playwright, used as a primary identifier",
+      "examples": ["William Shakespeare", "Ben Jonson"]
+    },
+    "Birth": {
+      "type": "integer",
+      "nullable": false,
+      "description": "Year of birth",
+      "examples": [1564, 1572]
+    },
+    "Death": {
+      "type": "integer",
+      "nullable": false,
+      "description": "Year of death",
+      "examples": [1616, 1637]
+    },
+    "Birthplace": {
+      "type": "string",
+      "nullable": false,
+      "description": "Town or county of birth",
+      "examples": ["Stratford-upon-Avon", "London"]
+    },
+    "Period": {
+      "type": "string",
+      "nullable": false,
+      "description": "Main literary period(s) of activity",
+      "allowed_values": ["Elizabethan", "Jacobean", "Caroline", "Elizabethan, Jacobean", "Jacobean, Caroline"],
+      "examples": ["Elizabethan, Jacobean"]
+    },
+    "Genre": {
+      "type": "string",
+      "nullable": false,
+      "description": "Major dramatic genre(s) associated with the author",
+      "examples": ["Tragedy, Satire", "Comedy, Tragicomedy"]
+    },
+    "Major Works": {
+      "type": "string",
+      "nullable": false,
+      "description": "List or title(s) of the most important works",
+      "examples": ["*Hamlet*, *Macbeth*, *Othello*", "*Volpone*, *The Alchemist*"]
+    },
+    "Style & Themes": {
+      "type": "string",
+      "nullable": false,
+      "description": "Summary of primary themes (e.g., ambition, fate, corruption) and general writing style",
+      "examples": ["Human nature, ambition, fate, identity"]
+    },
+    "Iconic Creatures": {
+      "type": "string",
+      "nullable": true,
+      "description": "Types of recurring or signature characters/figures (literal or figurative)",
+      "examples": ["Fools"]
+    },
+    "Visual Motifs": {
+      "type": "string",
+      "nullable": true,
+      "description": "Emojis representing common visual or thematic motifs",
+      "examples": ["🎭👑💀🔥💔🗡️🪞", "🎭🪶💰⚖️👑"]
+    },
+    "Relevance": {
+      "type": "string",
+      "nullable": false,
+      "description": "Historical or literary significance",
+      "examples": ["Benchmark, central to project", "Wit/power touchstone"]
+    },
+    "Notes": {
+      "type": "string",
+      "nullable": true,
+      "description": "Additional anecdotal or contextual notes",
+      "examples": ["Defines English Renaissance drama"]
+    }
+  },
+  "primary_key": ["Author", "Birth"],
+  "expected_rows": 20,
+  "expected_rows_note": "This reflects the initial dataset size and is fixed",
+  "source": "Hand-curated dataset created for ToGitOrNotToGit project",
+  "license": "CC-BY 4.0"
+}
