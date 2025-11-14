@@ -86,7 +86,7 @@
       "type": "string",
       "nullable": true,
       "description": "Link to a supernatural creature in the 'creatures' dataset",
-      "examples": ["ghost_001"]
+      "examples": []
     },
     "notes": {
       "type": "string",
