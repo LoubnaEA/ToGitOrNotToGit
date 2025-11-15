@@ -67,7 +67,7 @@ This column remain optional or expandable fields for advanced or derived analysi
 ### ✨ Sample from the Cleaned Dataset
 
 The dataset was manually curated and structured, defining relevant columns, ensuring consistent formatting and preparing the data for EDA and visualization.  
-Below is a sample from the cleaned `creatures_dataset_clean.csv`, produced after data wrangling, validation and alphabetical sorting by character name. The full dataset is available in **data/processed/creatures_clean.csv**.
+Below is a sample from the cleaned `creatures_clean.csv`, produced after data wrangling, validation and alphabetical sorting by character name. The full dataset is available in **data/processed/creatures_clean.csv**.
 
 
 | character        | author               | play                   | dramatic_function    | archetype          | dominant_traits             | variables                          | gender | social_status | human_or_not | visual_motifs           | number_of_characters_in_play | role_importance | interacts_with                 | speech_length | death_status | costume_props        | introduction_scene | gender_performance | moral_alignment | notes                               |
