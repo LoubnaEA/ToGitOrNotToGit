@@ -1,6 +1,6 @@
 # data_cleaning_report 
 
-This report documents the **cleaning and structuring processes** applied to **`creators_raw_dataset.csv`**, **`creatures_raw_dataset.md`**, **`dark_stage_raw_dataset.md`** before conversion into final `.csv` files for analysis.  
+**Cleaning and structuring processes** applied to **`creators_raw_dataset.csv`**, **`creatures_raw_dataset.md`**, **`dark_stage_raw_dataset.md`** before conversion into final `.csv` files for analysis.  
 This process illustrates practical **data wrangling** and **quality assurance** work : ensuring datasets are consistent, readable and ready for further **EDA**, visualizations or integration into analytics pipelines / databases.
 
 ---
