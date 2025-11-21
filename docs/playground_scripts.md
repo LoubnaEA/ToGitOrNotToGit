@@ -54,4 +54,8 @@ End of scroll.
 
 ## [Shakespeare WordCloud](#shakespeare-wordcloud)
 **Path :** `scripts/playground/shakespeare_wordcloud.py`   
-Generates word clouds from Shakespeare texts (`hamlet.txt`, `macbeth.txt`, `romeo_and_juliet.txt`) located in `data/raw/playground/`.  
+Generates word clouds from Shakespeare texts (`hamlet.txt`, `macbeth.txt`, `romeo_and_juliet.txt`) located in `data/raw/playground/`   
+![wordcloud_hamlet](scripts/playground/visuals/wordcloud_hamlet.png)   
+![wordcloud_macbeth](scripts/playground/visuals/wordcloud_macbeth.png)   
+![wordcloud_romeo_and_juliet](scripts/playground/visuals/wordcloud_romeo_and_juliet.png)   
+![wordcloud_screenshot](scripts/playground/visuals/wordcloud_screenshot.png)   
