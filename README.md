@@ -17,7 +17,7 @@ assert 'revenge' in macbeth_themes, "Macbeth must contain revenge"
 ````
 
 ## Conceptual Framework    
-= ***What to explore & why*** : the narrative arc in Four Acts from stage to spreadsheet, from plot points to data points  
+= ***What to explore & why***    
 > #### **Part I - The Shakespearean Death Map**  
 Every tragedy is a dataset of human error.  
 Deaths, betrayals and suicides are logged like failed test cases :  
