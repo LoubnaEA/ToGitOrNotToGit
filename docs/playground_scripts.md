@@ -1,6 +1,8 @@
 # playground_scripts
 
-Project **playground scripts** repository overview.  
+> **Part IV - Digital Afterlife**    
+> Focus : Transforming plays into data objects and visual insights, from textual analysis to exploratory scripts.
+
 Each script is a small experiment or demonstration related to Shakespeare, Python and  Git.  
 Use this guide to understand each script's purpose, inputs and outputs.
 
