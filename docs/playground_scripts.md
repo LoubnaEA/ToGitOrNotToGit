@@ -59,6 +59,5 @@ Generates word clouds from Shakespeare texts (`hamlet.txt`, `macbeth.txt`, `rome
 [wordcloud_hamlet](../scripts/playground/visuals/wordcloud_hamlet.png)  
 [wordcloud_macbeth](../scripts/playground/visuals/wordcloud_macbeth.png)  
 [wordcloud_romeo_&_juliet](../scripts/playground/visuals/wordcloud_romeo_and_juliet.png)  
-[wordcloud_screenshot](../scripts/playground/visuals/wordcloud_screenshot.png)  
 
 ![wordcloud_screenshot](../scripts/playground/visuals/wordcloud_screenshot.png)
