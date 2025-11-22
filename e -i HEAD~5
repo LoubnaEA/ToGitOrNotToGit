@@ -1,0 +1,83 @@
+[33m8ce270b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Create empty visuals folder with .gitkeep
+[33mdd57aa6[m Remove visuals images from repo
+[33m303360a[m Add xordcloud macbeth
+[33m0758138[m Rename to wordcloud_romeo_and_juliet.png
+[33m759cbfd[m Add wordcloud Rome + Juliet
+[33mda34be3[m Rename to visuals/wordcloud_hamlet.png
+[33m122051b[m Add Hamlet worcloud
+[33m3206ac0[m Create playground scripts repository overview
+[33m9174814[m Add Shakespeare WordCloud script
+[33me5e09b4[m Create  macbeth.txt
+[33m9525281[m Create hamlet.txt
+[33ma50d41f[m Create romeo_and_juliet.txt
+[33m9c595f5[m Add playground prophecy scripts
+[33m5cf8974[m Micro update
+[33m22b8e43[m Remove old dataset
+[33m423a9f7[m Enrich dataset with additional data
+[33mcf0a2e0[m Fix filename reference
+[33m3ce3bd3[m Update creatures.md
+[33m7d14ce2[m Update creatures.md
+[33m537a2f7[m Correct file path for cleaned dataset in documentation
+[33mbc1b26f[m Change dataset section title to 'Sample from the Cleaned Dataset'
+[33m675b3dc[m Update data cleaning report
+[33m6263527[m Create creatures_raw_dataset.md
+[33m24d9ebd[m Remove raw datasets
+[33m8b2c912[m Update
+[33m15b6ba4[m Add literary feuds and scandals for playwrights
+[33mf45deaf[m Expand dark_stage_raw_dataset with new entries
+[33maa8a1d9[m Fix formatting issue in dark_stage_raw_dataset.csv
+[33m8fffde9[m Fix formatting issue in dark_stage_raw_dataset.csv
+[33m1d331e7[m Update dark_stage_raw_dataset.csv
+[33m1bc52cb[m Remove empty line
+[33m5dc1ba7[m Create creatures_raw_dataset.csv file
+[33mef0d822[m Update dark_stage_raw_dataset.csv with new entries
+[33m5e3ecfb[m Add JSON schema for playwrights validation
+[33m3e29f39[m Create creators schema for Elizabethan and Jacobean playwrights
+[33mbb51557[m Add creators raw dataset CSV
+[33m3c7b47a[m Create creators_raw_dataset.md
+[33me7ea98d[m Add .json schema for dataset validation
+[33m7adfed2[m Clear examples for 'creature_id' in schema
+[33md42ca57[m Add dark_stage_schema.json file
+[33m26c1249[m Add dark_stage_raw_dataset.csv
+[33mc485511[m Create dark_stage_raw_dataset.md
+[33m2fa0877[m Micro fix
+[33m0f73628[m Revise creatures dataset structure and sample
+[33m13c332d[m Create data cleaning report for creatures dataset
+[33m6e1ba7d[m Expand dataset with additional characters and details
+[33m42ecf12[m Add character details to creatures dataset
+[33m1da4571[m Include tension diagrams
+[33m13d7be7[m Fix formatting in README sections
+[33m2c69afe[m Enhance documentation
+[33m5923dc9[m Enhance dark_stage.md with focus and formatting
+[33mf900d0d[m Revise and update the doc
+[33mb4cb787[m Nano update
+[33ma9e811d[m Expand creatures.md with Part II overview
+[33m4ac1005[m Revise creators.md with updated content
+[33m0b93c0f[m Add docs directory
+[33m5794188[m Enhance queries documentation
+[33m27b0b08[m Update column names to lowercase
+[33m2a733cd[m Update core columns
+[33mc7b31fa[m Remove dramatis_dataset_personae.md
+[33m577c401[m Add narrative queries section to queries.md
+[33m3ed8baf[m Add dark_stage.md for theatrical anecdotes and rivalries
+[33m4efb358[m Fix year
+[33m986a1f2[m Update creators.md
+[33md673cc8[m Update emoji annotations in creatures.md
+[33mbce5ee0[m Create creatures.md documentation for dataset
+[33me8bac4d[m Revise creators documentation with new author details
+[33mbb56407[m Enhance creators documentation
+[33m0bd12ee[m Revise creators.md for clarity and structure
+[33m5abb740[m Create authors.md
+[33ma695175[m Merge branch 'main' of https://github.com/LoubnaEA/ToGitOrNotToGit
+[33mdc4d697[m Add authors and dramatis_dataset_personae docs
+[33m5675d18[m Refine README content for clarity and consistency
+[33m0d573eb[m Remove git_quick_start.md duplicate
+[33m5ebd106[m Delete git_quick_start.md content
+[33mc38aaa5[m Revise git_guide.md for consistency and clarity
+[33mb4c623b[m Revise Git Quick Start guide for better readability
+[33m4f2c3aa[m Add Git setup & Quick Start guides
+[33m348171c[m Add requirements.txt for dependencies
+[33me027c6e[m Add project folders with .gitkeep files
+[33m958721f[m Revise Conceptual Framework and enhance narrative clarity
+[33mba5f521[m Revise README
+[33ma710887[m Initial commit
