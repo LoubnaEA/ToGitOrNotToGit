@@ -75,10 +75,11 @@ Flaky data mirrors human inconsistency.
 │   └── metadata/ → dramatis personae of sin : characters, themes, dates  
 ├── 📁 docs/ → where narrative and data converge  
 ├── 📁 notebooks/ → hypotheses meet performance ; each EDA a small act of resurrection  
-├── 📁 scripts/ → *All the world’s a stage… and we are but scripts in a repository of sins*  
-├── 📁 visuals/ → the cartography of the forbidden : heatmaps of guilt, timelines of decay  
 ├── 📁 references/ → scholars, critics, ghosts of commentary  
-├── 📁 security/ → Plague, virus, firewall, bugs, quarantine, corrupted_commits   
+├── 📁 scripts/ → *All the world’s a stage… and we are but scripts in a repository of sins*   
+├── 📁 security/ → Plague, virus, firewall, bugs, quarantine, corrupted_commits  
+├── 📁 tests/ → automated tragedies ; unit tests and integration tests for every act  
+├── 📁 visuals/ → the cartography of the forbidden : heatmaps of guilt, timelines of decay   
 ├── *.md  → public scripts and stage directions for the digital audience   
 └── *.txt → backstage notes, raw drafts and litany of dependencies to keep tragedy reproducible  
   
