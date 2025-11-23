@@ -96,11 +96,6 @@ Scenario: Macbeth is corrupted by ambition
   Given Macbeth hears the witches' prophecy
   When he plots regicide
   Then he fails to pass QA of morality and dies
-
-Scenario: Ophelia succumbs to despair
-  Given Ophelia is grieving
-  When human error overwhelms her
-  Then she drowns despite any intervention
 ```
 
 ***Euphues.ly***  
