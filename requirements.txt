@@ -22,3 +22,5 @@ py2neo
 
 # QA / testing
 pytest
+pytest-bdd
+

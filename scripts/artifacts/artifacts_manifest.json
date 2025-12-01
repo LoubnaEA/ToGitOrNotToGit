@@ -1,0 +1,34 @@
+{
+  "hamlet": {
+    "category": "tragedy",
+    "description": "Hamlet faces the impossibility of escaping fate"
+  },
+  "macbeth": {
+    "category": "tragedy",
+    "description": "Ambition corrodes Macbeth’s moral core"
+  },
+  "ophelia": {
+    "category": "psychological",
+    "description": "Ophelia fractures under emotional pressure"
+  },
+  "faustus": {
+    "category": "morality",
+    "description": "Faustus’ pact seals his downfall"
+  },
+  "duchess": {
+    "category": "court intrigue",
+    "description": "Secrets unravel in the corrupt court"
+  },
+  "spanish_tragedy": {
+    "category": "revenge drama",
+    "description": "Revenge escalates beyond control"
+  },
+  "euphues": {
+    "category": "moral allegory",
+    "description": "Virtue fails under flawed reasoning"
+  },
+  "random_fate": {
+    "category": "chaos",
+    "description": "Unpredictable outcomes driven by chance"
+  }
+}

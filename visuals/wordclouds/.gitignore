@@ -1,0 +1,6 @@
+﻿# Ignore all temporary playground visuals
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.gif

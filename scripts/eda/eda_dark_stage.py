@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # =========================================
-# 1. Load dataset
+# Load dataset
 # =========================================
 df = pd.read_csv("data/raw/dark_stage_raw_dataset.md", sep="\\")
 
@@ -11,7 +11,7 @@ df = pd.read_csv("data/raw/dark_stage_raw_dataset.md", sep="\\")
 df.columns = [c.strip() for c in df.columns]
 
 # =========================================
-# 2. Normalize categorical columns
+# Normalize categorical columns
 # =========================================
 categorical_cols = ['author', 'archetype', 'death_status', 'gender']
 for col in categorical_cols:
@@ -22,7 +22,7 @@ death_map = {"alive":0, "dead":1, "unknown":None, "":None}
 df['death_status_encoded'] = df['death_status'].map(death_map)
 
 # =========================================
-# 3. Basic Stats
+# Basic Stats
 # =========================================
 print("\n=== INFO ===")
 print(df.info())
@@ -38,7 +38,7 @@ for col in categorical_cols:
     print(df[col].value_counts())
 
 # =========================================
-# 4. Visualizations
+# Visualizations
 # =========================================
 plt.figure(figsize=(6,4))
 sns.countplot(data=df, x='death_status')
@@ -56,7 +56,7 @@ plt.title('Characters per Author')
 plt.show()
 
 # =========================================
-# 5. Quality Checks
+# Quality Checks
 # =========================================
 print("\n=== Missing Values ===")
 print(df.isna().sum())

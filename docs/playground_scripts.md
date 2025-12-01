@@ -1,65 +1,108 @@
-# playground_scripts
+# Dev Sandbox - Playground Scripts
 
-> **Part IV - Digital Afterlife**    
-> Focus : Transforming plays into data objects and visual insights, from textual analysis to exploratory scripts.
+The playground provides an **isolated development space** for experimentation, prototypes, non-production logic.  
+Its purpose is to accelerate iteration while keeping the main codebase clean, stable and maintainable.
 
-Each script is a small experiment or demonstration related to Shakespeare, Python and  Git.  
-Use this guide to understand each script's purpose, inputs and outputs.
-
-Requires Python packages : `matplotlib`, `numpy`, `pillow`, `wordcloud`
+This zone **must never affect** the production-ready modules (`fate_engine/`, `eda/`, `artifacts/`).
 
 ---
 
-## [Shakespearean Fate](#shakespearean-fate)
-**Path :** `scripts/playground/shakespearean_fate.py`    
-A whimsical script that outputs a Shakespeare-style warning based on your code commits or features.  
-**Ex :**
-```text
-Push not tonight, for the linter’s wrath shall smite thee.  
+### 1. Scope & Responsibilities
+
+#### What the Playground Is For
+- Quick experiments  
+- Draft EDA exploration  
+- Temporary visualization tests  
+- One-off transformations  
+- Debug utilities  
+- Inline experiments for future modules  
+#### What It Is NOT For
+- Final visuals  
+- Production-ready logic  
+- Stable APIs or public functions  
+- Long-term scripts without owners  
+
+
+### 2. Directory Layout (Recommended)
+scripts/playground/  
+├── notebooks/         → scratch notebooks (optional)  
+├── visuals/           → disposable charts (gitignored)  
+├── scratch/           → ideas, prototypes, temp code  
+└── utils/             → optional small helpers for sandbox only  
+
+`visuals/` is protected by a `.gitignore` to prevent accidental commits.
+
+
+### 3. Promotion Lifecycle  
+A script follows a clear **Dev → Candidate → Stable** path.  
+
+- **Stage 1 : Dev** (default)
+  - Located in `scripts/playground/`
+  - Rapid iteration, incomplete logic
+  - No tests required  
+
+- **Stage 2 : Candidate**  
+Moved to the target module (e.g. `scripts/eda/`)  
+Criteria :
+  - Code is coherent, reusable, and documented
+  - Output is deterministic
+  - Naming + folder choice validated
+
+- **Stage 3 : Stable**  
+Becomes part of the official codebase when :
+  - Tests exist  
+  - Public function signatures are clean  
+  - No debug or print statements  
+  - Follow module conventions (EDA/Fate/Artifacts)  
+
+
+### 4. Cleanup Policies
+**Weekly Cleanup (recommended)**
+Remove :
+- orphan scripts  
+- duplicated logic  
+- unused visual outputs  
+- stale notebooks  
+- heavy scratch files  
+
+**Commit Rules**
+- Never commit large experimental outputs  
+- Always document promotions (`playground → module`) in commit messages  
+
+
+### 5. Usage Example
+**Quick Prototype**
+```python
+# scripts/playground/scratch/creature_test.py
+from scripts.eda.token_stats import compute_frequencies
+freqs = compute_frequencies(open("data/raw/hamlet.txt").read())
+print(freqs["king"])
 ````
-
-## [Python Omens](#python-omens)
-**Path :** `scripts/playground/python_omens.py`  
-This script provides Python-related warnings or omens, e.g., about versions, dependencies, environment issues.  
-**Ex :**  
-```text
-A cursed dependency lies dormant in thy environment.txt—update or be doomed.
+**Visual Temporary Export**
+```python
+plt.savefig("scripts/playground/visuals/test_plot.png", dpi=120)
 ```
 
-## [Git Whisperer](#git-whisperer)
-**Path :** `scripts/playground/git_whisperer.py`  
-Outputs warnings about Git repository state, uncommitted changes, potential merge conflicts.  
-**Ex :** 
-```text
-Your branch 'main' bleeds with uncommitted changes. The shadows urge : commit, or face chaos. Merge conflicts brew like storm clouds.
-```
+### 6. Integration with the Repo
+The playground is designed for :
+* fast iteration
+* safe experimentation
+* low coupling with the main architecture
 
-## [Runner Prophecy](#runner-prophecy)
-**Path :** `scripts/playground/runner_prophecy.py`  
-A runner script that executes all playground scripts in one go and aggregates their messages.  
-**Ex Output :**  
-```text
-🕯️  THE PROPHETIC SCROLL OF CODE & COMMITS  🕯️
+Modules in `scripts/` **may depend on playground prototypes**,
+but nothing in the playground should depend on stable modules.
 
-------------------------------------------------------------------------
-⏳ Shakespearean Fate :
-Beware the feature flag, for it hideth serpents beneath its cloak.
-------------------------------------------------------------------------
-🐍 Pythonic Omen :
-The Python spirits whisper: version 3.11 is fickle on Windows. Beware incompatible wheels.
-------------------------------------------------------------------------
-🌑 Git Whisper :
-Your branch 'main' bleeds with uncommitted changes. The shadows urgec: commit, or face chaos. Your commit history hides a secret regret.
-------------------------------------------------------------------------
-End of scroll.
-```
 
-## [Shakespeare WordCloud](#shakespeare-wordcloud)
-**Path :** `scripts/playground/shakespeare_wordcloud.py`   
-Generates word clouds from Shakespeare texts (`hamlet.txt`, `macbeth.txt`, `romeo_and_juliet.txt`) located in `data/raw/playground/`   
+### 7. Compatibility Notes
+* Python ≥ 3.10
+* No external dependencies required
+* All sandbox code must remain isolated from CI/CD
 
-[wordcloud_hamlet](../scripts/playground/visuals/wordcloud_hamlet.png)  
-[wordcloud_macbeth](../scripts/playground/visuals/wordcloud_macbeth.png)  
-[wordcloud_romeo_&_juliet](../scripts/playground/visuals/wordcloud_romeo_and_juliet.png)  
 
-![wordcloud_screenshot](../scripts/playground/visuals/wordcloud_screenshot.png)
+### 8. Glossary
+**Playground** : Experimental zone with no stability guarantees.  
+**Promotion** : Migration of a script from sandbox → official module.  
+**Candidate** : Script pending validation before entering stable modules.  
+
+---
+
