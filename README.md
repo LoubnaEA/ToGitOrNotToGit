@@ -16,6 +16,8 @@ assert hamlet_alive == False, "Hamlet should be dead by Act V"
 assert 'revenge' in macbeth_themes, "Macbeth must contain revenge"  
 ````
 
+🧭 For a detailed overview of the project structure and ecosystem, see [`docs/project_architecture.md`](docs/project_architecture.md)   
+
 ## Conceptual Framework    
 = ***What to explore & why***    
 > #### **Part I - The Shakespearean Death Map**  
@@ -73,9 +75,10 @@ Flaky data mirrors human inconsistency.
 │   ├── raw/ → unfiltered tragedies, uncleaned, unrepentant  
 │   ├── processed/ → refined datasets, every death is normalized  
 │   └── metadata/ → dramatis personae of sin : characters, themes, dates  
-├── 📁 docs/ → where narrative and data converge  
-├── 📁 notebooks/ → hypotheses meet performance ; each EDA a small act of resurrection  
-├── 📁 references/ → scholars, critics, ghosts of commentary  
+├── 📁 docs/ → where narrative and data converge   
+├── 📁 features/ → scripts and scenarios capturing key narrative or dataset features   
+├── 📁 notebooks/ → hypotheses meet performance ; each EDA a small act of resurrection     
+├── 📁 references/ → scholars, critics, ghosts of commentary   
 ├── 📁 scripts/ → *All the world’s a stage… and we are but scripts in a repository of sins*   
 ├── 📁 security/ → Plague, virus, firewall, bugs, quarantine, corrupted_commits  
 ├── 📁 tests/ → automated tragedies ; unit tests and integration tests for every act  
