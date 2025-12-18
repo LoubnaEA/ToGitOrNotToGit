@@ -82,6 +82,13 @@ Flaky data mirrors human inconsistency.
 ├── 📁 visuals/ → the cartography of the forbidden : heatmaps of guilt, timelines of decay   
 ├── *.md  → public scripts and stage directions for the digital audience   
 └── *.txt → backstage notes, raw drafts and litany of dependencies to keep tragedy reproducible  
+
+## EDA Notebooks 
+Exploratory analyses of the datasets available as **interactive HTML notebooks** via GitHub Pages.  
+These notebooks provide a clear view of the data, visualizations, quality checks performed for each dataset.  
+
+[EDA Creators](https://loubnaea.github.io/ToGitOrNotToGit/eda_creators.html) 🎭 analysis of the `creators` dataset   
+[EDA Dark Stage](https://loubnaea.github.io/ToGitOrNotToGit/eda_dark_stage.html) 🗣️ analysis of the `dark_stage` dataset  
   
 ## Artifacts of the Stage  
 
