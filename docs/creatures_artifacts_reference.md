@@ -1,4 +1,4 @@
-# ✨ creatures_scenarios
+# ✨ creatures_artifacts_reference
 
 This document outlines all narrative `artifacts` in the Fate Engine.  
 Each artifact has one or more outcomes, a category and contextual triggers.
@@ -13,8 +13,8 @@ from scripts.fate_engine import load_artifact
 result = load_artifact("Hamlet")
 ````
 
-**Testing Guide :**
-To validate new artifacts :
+**Testing Guide :**  
+To validate new artifacts :  
 ```bash
 python scripts/playground/test_artifacts_loader.py --name Hamlet
 ```
