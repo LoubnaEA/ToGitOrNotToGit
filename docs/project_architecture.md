@@ -8,13 +8,13 @@ The repository can be read as a **layered system**, where narrative, data, code 
 ## Conceptual Layers
 **`ToGitOrNotToGit 💀`** is structured around four main layers. Each folder belongs primarily to one of these layers, while still interacting with the others.
 
-> **Act I : The Shakespearean Death Map**    
+> **Act I - The Shakespearean Death Map**    
 * **Source Material & Data** : the literary corpus and its transformations   
-> **Act II : Jacobean & Elizabethan Edge**   
+> **Act II - Jacobean & Elizabethan Edge**   
 * **Analysis & Exploration** : EDA, notebooks, scripts   
-> **Act III : Mapping the Taboo**   
+> **Act III - Mapping the Taboo**   
 * **Validation & Quality** : schemas, tests, QA logic   
-> **Act IV : Digital Afterlife**   
+> **Act IV - Digital Afterlife**   
 * **Narrative & Outputs** : documentation, visualizations, published artifacts  
 
 ## Repository Tree (Simplified)
