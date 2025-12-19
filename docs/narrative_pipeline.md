@@ -31,6 +31,9 @@ def generate():
     return [random.choice(outcomes)]
 ```
 
+For a complete overview of all narrative artifacts, their outcomes, triggers and categories, check it out : [creatures_artifacts_reference](creatures_artifacts_reference.md)
+
+
 ##  Fate Engine Core 🔮 `scripts/fate_engine/`  
 Generates outcomes and “prophecies” based on artifacts and inputs.  
 Responsible for narrative logic, deterministic or branching.
