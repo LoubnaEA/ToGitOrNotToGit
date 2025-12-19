@@ -68,9 +68,14 @@ Where the engine is executed and tested. Supports experimentation and orchestrat
 ## Utility `scripts/` 🛠️
 Supporting scripts that facilitate workflow but do not generate narrative outputs.
   
-**Ex** : `md_to_delim.py` → converts markdown to delimited formats  
-**Ex** : `test_run_all.py` → runs tests across scripts  
+- `md_to_delim.py` → converts markdown to delimited formats
+- **`run_artifacts.py`** → simple runner that calls each artifact and prints one-line outputs for testing or demonstration
+- `test_run_all.py` → runs tests across scripts  
 
+**Ex** : **`run_artifacts.py`**
+```python
+print("🗡️ Macbeth succumbs to regicide")  # Macbeth artifact
+```
 
 ## Outputs 🕊️ `visuals/fate_outputs/`, `visuals/screenshots/`, `visuals/wordclouds/`  
 Contains all results of the narrative pipeline, including :  
