@@ -109,6 +109,25 @@ For full runtime context, see **`scripts/playground/run_artifacts.py`** to execu
 * **Code :** [spanish_tragedy.py](../scripts/artifacts/spanish_tragedy.py)  
 * **Test :** `python scripts/playground/test_artifacts_loader.py --name SpanishTragedy`
 
+### Testing & Validation
+All narrative artifacts are covered by executable tests.
+
+Validation includes :
+- artifact discovery and loading  
+  (the system automatically finds artifact definitions in the codebase and loads them at runtime)
+- manifest consistency checks  
+  (each artifact entry matches its declared metadata : name, category, outcomes, level, triggers)
+- outcome structure validation  
+  (all declared outcomes follow the expected schema and required fields)
+- runtime execution without errors  
+  (artifacts execute end-to-end without raising exceptions)
+
+Relevant test entry points :
+- `scripts/playground/test_artifacts_loader.py`
+- `scripts/run_artifacts.py` (runtime smoke test)
+- `tests/unit/`
+- `tests/integration/`
+
 ### Why single-outcome artifacts still matter
 Even deterministic artifacts are useful:
 1. **Clarity & documentation**  
