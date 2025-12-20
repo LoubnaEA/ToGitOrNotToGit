@@ -1,105 +1,126 @@
-# Fate Engine Runtime
+# 🔮 Fate Engine Runtime
 
-The Fate Engine executes the full analytical pipeline used to convert raw text into structured insights.  
-It defines the scoring graph, reduction layers, normalization rules, output schema consumed by upper modules.
+The Fate Engine is a **narrative runtime** responsible for executing deterministic and semi-deterministic flows that transform textual inputs and contextual signals into structured narrative outputs.
+
+It acts as the **central orchestration layer** between narrative artifacts, playground execution scripts and output generation.
+
+The engine is intentionally lightweight and explicit, prioritizing **clarity, testability and extensibility** over complex modeling.
 
 ---
 
-### 1. Architectural Role
-- Acts as the **runtime orchestrator** for all fate-scoring operations.  
-- Provides **stable contracts** for pipeline nodes (scorers, reducers, normalizers).  
-- Ensures deterministic, reproducible results across datasets.
-#### Core Guarantees
-- Same input → same output (deterministic mode)
-- All steps follow the **Fate IO Schema**
-- Pipeline execution isolated from EDA and artifacts layers
+### 1️⃣ Architectural Role
 
+The Fate Engine :
+* Orchestrates the execution of narrative logic
+* Provides **stable execution contracts** for artifacts and generators
+* Ensures reproducible outcomes when deterministic or seeded
+* Acts as a bridge between :
+  * narrative artifacts
+  * runtime playground scripts
+  * future analytical or scoring layers
 
-### 2. Directory Layout
-scripts/fate_engine/  
-├── engine.py        → master orchestrator, run_fate(), pipeline execution  
-├── scorers.py       → scoring functions, semantic weight maps  
-├── reducers.py      → text normalization, compression, cleanup rules  
-└── utils.py         → shared helpers (token ops, guards, transformations)  
+**Core Guarantees**
+* Same input + same configuration → same output
+* Clear separation between :
+  * **artifacts** (narrative units)
+  * **runtime orchestration**
+  * **playground / experimentation**
+* Stateless execution (no hidden side effects)
 
-
-### 3. Execution Model
-#### Pipeline Contract
-Each stage receives a **FateInput** and returns a **FateOutput** :
+### 2️⃣ Directory Layout
+```text
+scripts/fate_engine/
+├── prophecy_generator.py   → narrative outcome generator
+├── text_parser.py          → text parsing utilities
+├── visual_helper.py        → output / display helpers
+└── __init__.py
 ```
-Raw Text
-↓
-Tokenization (optional pre-step)
-↓
-Scorers            → assigns semantic weights
-↓
-Reducers           → compress, normalize, filter noise
-↓
-Final Composer     → structured output map
-````
 
-#### Fate Output Schema
-A valid Fate output always contains :
+The Fate Engine does not execute autonomously.
+It is always invoked by runtime scripts located in `scripts/playground/`
+
+### 3️⃣ Execution Model
+
+**Narrative Flow**
+```text
+Input Text / Context
+↓
+Optional Parsing (text_parser)
+↓
+Narrative Generation (prophecy_generator or artifacts)
+↓
+Formatting / Display Helpers
+↓
+Structured Output
+```
+
+Each execution step is intentionally explicit and inspectable, making the pipeline easy to test and reason about.
+
+### 4️⃣ Output Structure
+
+A Fate Engine execution typically produces :
+* A narrative outcome (string or structured text)
+* Optional metadata (scenario, seed, execution mode)
+* Optional persisted outputs (text files, visuals)
+
+Ex conceptual output :
 ```json
 {
-  "weights": { ... },         // semantic or structural weights
-  "layers": { ... },          // reduced/compressed layers
-  "meta": {                   // runtime metadata
-      "version": "x.y.z",
-      "execution_mode": "deterministic"
+  "outcome": "💀 Ambition seals the fate",
+  "meta": {
+    "scenario": "macbeth",
+    "execution_mode": "deterministic"
   }
 }
-````
+```
+The output structure is designed to remain **JSON-safe** and compatible with future analytical or visualization layers.
 
-
-### 4. Usage Example 
+### 5️⃣ Usage Example
 ```python
-from fate_engine.engine import run_fate
-result = run_fate("All the world's a stage, and all the men and women merely players.")
-print(result["weights"])
+from scripts.fate_engine.prophecy_generator import generate_prophecy
+
+result = generate_prophecy(character="Hamlet")
+print(result)
 ```
 
-
-### 5. Error Model
-| Code    | Error Type            | Trigger                           |
-| ------- | --------------------- | --------------------------------- |
-| FATE-01 | InvalidPipelineState  | Missing or misconfigured stage    |
-| FATE-02 | ScoringError          | Weight calculation failure        |
-| FATE-03 | ReductionError        | Normalization/compression failure |
-| FATE-04 | FateOutputSchemaError | Output missing required fields    |
-
-
-### 6. Test Execution
+Or via runtime scripts :
 ```bash
-pytest -q scripts/fate_engine
+python scripts/playground/run_fate_engine.py
 ```
-Tests cover :
-* Node-level behavior
-* Pipeline determinism
-* Fate Output Schema validation
 
+### 6️⃣ Error & Stability Model
 
-### 7. Promotion Rules (Dev → Stable)
-A new pipeline stage becomes **stable** when :
-1. It defines a clear input/output contract
-2. It is deterministic
-3. It is used by `run_fate()` without optional flags
-4. All Fate Output Schema tests pass
+The Fate Engine follows a **fail-fast philosophy** :
+* Invalid inputs raise explicit Python errors
+* Missing artifacts or unsupported scenarios are reported clearly
+* Runtime scripts act as smoke tests for engine stability
 
+### 7️⃣ Testing & Validation
 
-### 8. Compatibility Notes
-* Python ≥ 3.10
-* Engine designed to be stateless and side-effect-free
-* Compatible with JSON-safe outputs for downstream analysis
+The Fate Engine is covered by :
+* Unit tests for core generators and utilities
+* Integration tests through playground scripts
+* Smoke tests via full artifact execution
 
+See `tests/README.md` for the full testing strategy.
 
-### 9. Glossary
-**Scorer** : Computes semantic or structural weights.
-**Reducer** : Normalizes or compresses intermediate results.
-**Pipeline Node** : Atomic step in the Fate runtime.
-**Fate Output** : Final structured result consumed by other modules.
+### 8️⃣ Future Expansion (Planned & Possible)
 
+The current Fate Engine intentionally avoids heavy analytics.
+However, its structure allows future extensions such as :
+* Narrative weighting or scoring layers
+* Branching logic based on contextual thresholds
+* Normalization or aggregation of multiple outcomes
+* Integration with data-driven or ML-based evaluators
+* API exposure for external narrative consumers
 
----
+These enhancements can be added **without breaking existing artifacts or runtime scripts**.
 
+### 9️⃣ Design Philosophy
+* Explicit > implicit
+* Testable > clever
+* Narrative clarity > opaque abstraction
+
+The Fate Engine is not a black box.  
+It is a readable, extensible runtime designed to evolve alongside the project.   
 
