@@ -1,92 +1,145 @@
-# Artifacts Registry Layer
+# Narrative Artifacts Layer
 
-Centralized layer responsible for the creation, validation, storage and retrieval of all persistent artifacts produced within the analysis pipeline.    
-Provides reliability guarantees, version safety, consistent IO semantics across modules.
+> Artifacts are small, testable narrative building blocks that power the Fate Engine. 
 
---- 
+This directory contains all **narrative artifacts** used by the Fate Engine.
+Artifacts are small, self-contained Python modules that generate deterministic or contextual narrative outcomes.
 
-### 1️⃣ Scope & Responsibilities
-#### Core Contracts
-- **Stable serialization** for dictionaries, lists, statistical maps, model-like objects.  
-- **Deterministic loading** with type validation and optional schema checks.  
-- **Version-safe naming** : components can evolve without breaking downstream consumers.
-- **Isolation** : artifacts stored here never contain business logic.
-#### Not Included
-- No domain computation  
-- No visualization generation  
-- No fate scoring logic  
+They represent the **atomic narrative units** of the project.
 
+---
+
+## 1️⃣ Scope & Responsibilities
+
+**What artifacts are**
+* **Atomic narrative generators**
+* Each artifact exposes a `generate()` function
+* Returns one or more **narrative outcomes**
+* Outcomes may be :
+  * deterministic
+  * conditional
+  * seeded / reproducible
+* Artifacts are :
+  * human-readable
+  * testable
+  * executable in isolation
+
+Artifacts are the **source of truth** for :
+* narrative behavior
+* QA validation
+* future API exposure
+
+**What artifacts are NOT**
+* No orchestration logic
+* No runtime execution flow
+* No visualization logic
+* No Fate Engine control logic
+
+Artifacts **describe narratives**, they do not decide *when* or *how* they run.
 
 ### 2️⃣ Directory Layout
-scripts/artifacts/  
-├── save_artifact.py      → write interfaces (json, pickle-safe, text)  
-├── load_artifact.py      → read interfaces with optional validation  
-├── artifact_utils.py     → hashing, versioning, path helpers  
-└── samples/              → minimal example artifacts (dev/debug)  
-
-
-### 3️⃣ IO Specifications
-#### Write API, Guarantees
-- Writes are **atomic** (tempfile → final).
-- Output is **human-inspectable** when possible (JSON-first).
-- Every write operation returns a **ResolvedArtifactPath**.
-### Read API, Guarantees
-- Fails with **explicit error classes** (no silent fallbacks).
-- Guarantees **shape fidelity** (same type as original input).
-- Optional checksum verification (via `artifact_utils`).
-
-
-### 4️⃣ Usage Examples
-#### Save JSON
-```python
-from artifacts.save_artifact import save_json
-save_json({"counts": tokens}, "token_map.json")
-````
-#### Load JSON
-```python
-from artifacts.load_artifact import load_json
-tokens = load_json("token_map.json")
 ```
-#### Save Python Object (safe-pickle)
-```python
-from artifacts.save_artifact import save_pickle
-save_pickle(model, "ngram_model.pkl")
+scripts/artifacts/
+├── duchess.py
+├── euphues.py
+├── faustus.py
+├── hamlet.py
+├── macbeth.py
+├── ophelia.py
+├── random_fate.py
+├── spanish_tragedy.py
+└── __init__.py
 ```
 
+Metadata and validation schemas live in :
 
-### 5️⃣ Error Model
-| Code   | Error Type          | Trigger                                 |
-| ------ | ------------------- | --------------------------------------- |
-| ART-01 | InvalidArtifactPath | File missing / invalid extension        |
-| ART-02 | ArtifactReadError   | Corrupted file / failed deserialization |
-| ART-03 | ArtifactSchemaError | Shape mismatch when validation enabled  |
-| ART-04 | ArtifactWriteError  | Insufficient permissions or disk issues |
+```
+data/metadata/
+├── artifacts_manifest.json
+├── creators_schema.json
+└── creators_validation.json
+```
 
+### 3️⃣ Artifact Contract
 
-### 6️⃣ Test Execution
-Artifacts follow strict IO policies and are fully covered with unit tests.
+Each artifact must :
+* Be discoverable by the runtime
+* Expose a public `generate()` function
+* Return :
+  * a list of outcomes, or
+  * a structured outcome object
+* Match its declaration in `artifacts_manifest.json`
+
+**Minimal example**
+```python
+def generate():
+    return ["💀 Fate is sealed"]
+```
+
+### 4️⃣ Execution & Runtime Usage
+
+Artifacts are **not executed directly**.
+
+They are called via :
+* `scripts/run_artifacts.py` (smoke test / demo)
+* `scripts/playground/runner_prophecy.py`
+* Fate Engine runtime scripts
+
+Ex (runtime) :
 ```bash
-pytest -q scripts/artifacts
+python -m scripts.run_artifacts
 ```
 
+### 5️⃣ Testing & Validation
 
-### 7️⃣ Promotion Rules (Dev → Stable)
-A new artifact format becomes *stable* when :
-1. It is produced by a stable module
-2. A matching loader exists
-3. Round-trip tests (save → load) succeed
+Artifacts are fully testable and covered by automated checks.
 
+Validation includes :
+* artifact discovery
+* manifest consistency
+* outcome structure validation
+* runtime execution without errors
+
+See **`tests/README.md`** for full testing strategy.
+
+### 6️⃣ Determinism & Levels
+
+Some artifacts reference **levels** (e.g. max level 7).
+
+These represent :
+* narrative escalation thresholds
+* stress / corruption / revenge intensity
+* bounded deterministic ranges used for testing and reproducibility
+
+They are **domain-level narrative controls**, not technical constraints.
+
+### 7️⃣ Future Extensions (Planned)
+
+This layer is intentionally simple but designed to evolve toward :
+* branching artifacts
+* parameterized outcomes
+* external artifact loading
+* API-based artifact retrieval
+* artifact persistence & versioning
+* contract-based artifact schemas
+
+Current artifacts are **pure Python**, future versions may support :
+* JSON-defined artifacts
+* database-backed artifacts
+* LLM-augmented narratives
 
 ### 8️⃣ Compatibility Notes
 * Python ≥ 3.10
-* JSON outputs are UTF-8 normalized
-* Pickle mode restricted to safe protocol levels (no arbitrary code execution)
-
+* Artifacts are deterministic when seeded
+* Side-effect free (no file IO, no global state)
 
 ### 9️⃣ Glossary
-**Artifact** : Any persisted output required by other modules.  
-**IO Contract** : Rules ensuring loading always matches the saved type/shape.  
-**Round-trip Safety** : Guarantee that `load(save(x)) == x`.  
+**Artifact**   
+Minimal narrative generator producing structured outcomes.  
+**Outcome**   
+Symbolic narrative result (💀 / 🌿 / 🩸).  
+**Manifest**   
+Central registry describing artifact metadata and expected structure.  
+**Determinism**  
+Same inputs + same seed → same outcome.  
 
-
-```
