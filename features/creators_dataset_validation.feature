@@ -1,8 +1,7 @@
 # 🎭 Feature : Creators Dataset Validation
 
 # Ensures integrity, consistency, semantic richness of `creators_raw_dataset.csv`
-# Reference Notebooks (no outputs):
-#   - notebooks/eda_creators.ipynb
+# Reference Notebooks (no outputs) : notebooks/eda_creators.ipynb
 
 Feature: Validate Creators Dataset
   As a QA/Data engineer
