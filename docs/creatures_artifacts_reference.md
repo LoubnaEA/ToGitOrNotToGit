@@ -124,7 +124,7 @@ Validation includes :
 - runtime execution without errors  
   (artifacts execute end-to-end without raising exceptions)
 
-Relevant test entry points :
+Relevant test entry points (see [full test strategy](../tests/README.md)) :
 - `scripts/playground/test_artifacts_loader.py`
 - `scripts/run_artifacts.py` (runtime smoke test)
 - `tests/unit/`
