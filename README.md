@@ -3,6 +3,8 @@
 
 Exploring Death, Taboo and Transgression in Elizabethan & Jacobean Drama.  
 
+![Python](https://img.shields.io/badge/python-3.10+-blue)  
+
 ---
 
 ## 🎭 A Prelude to the Dark Stage
