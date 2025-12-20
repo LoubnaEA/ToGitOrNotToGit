@@ -1,106 +1,160 @@
 # EDA Subsystem
 
-Provides all analytical primitives required to explore, quantify and decompose text datasets.  
-Functions here power data understanding, feature derivation, visual preparation used by other modules.
+> The EDA layer describes *what exists in the text*, without interpreting *what it means*.
+
+This subsystem provides all **deterministic analytical primitives** used to explore, decompose and quantify narrative text datasets.  
+It serves as the **foundation layer** for understanding textual structure and distributions before any narrative interpretation or fate logic is applied.  
 
 ---
 
-### 1. Responsibilities
-#### Core Capabilities
-- Token frequency computation (global + per-segment)
-- Structural decomposition (sentences, paragraphs, acts)
-- Statistical preparation for EDA visualizations
-- Feature builders for downstream modules (Fate Engine, models, etc.)
-#### Explicit Non-Goals
-- No fate scoring  
-- No heavy ML modeling  
-- No persistent storage (handled by `artifacts/`)  
+### 1️⃣ Scope & Responsibilities
 
+**What this layer does**
+* **Text decomposition**
+  * sentences
+  * paragraphs
+  * high-level structural units
+* **Token and n-gram analysis**
+  * token frequencies
+  * global and segment-level statistics
+* **Analytical feature extraction**
+  * quantitative signals derived from text
+* **Visualization preparation**
+  * normalized data structures for charts and wordclouds
 
-### 2. Directory Layout
-scripts/eda/  
-├── token_stats.py     → n-grams, frequencies, TF maps  
-├── structures.py      → structural segmentation + hierarchy  
-├── visual_prep.py     → data prep for charts/wordclouds  
-└── examples/          → small sample outputs for debugging  
+This layer answers the question : *What is objectively present in the text ?*
 
+**What this layer does NOT do**
+* No fate evaluation
+* No narrative decision logic
+* No scoring, ranking or interpretation
+* No persistence (handled elsewhere)
+* No ML or probabilistic modeling
 
-### 3. Data Flow & Contracts
-#### Input Contract
-`str` or list of strings (tokenized text accepted).
-#### Output Contract
-Always returns a **pure analytical structure**, e.g. :
-```json
+EDA is **descriptive**, never prescriptive.
+
+### 2️⃣ Directory Layout
+```
+scripts/eda/
+├── token_stats.py     → token frequencies, n-grams, counts
+├── structures.py      → structural segmentation & hierarchy
+├── visual_prep.py     → visualization-ready data structures
+└── examples/          → small reference outputs (dev/debug)
+```
+
+### 3️⃣ Data Contracts
+
+**Input**
+* `str` (raw text)
+* `list[str]` (pre-split segments)
+* Tokenized input is accepted where explicitly documented
+  
+**Output**  
+Always returns **pure Python analytical structures**  
+(no side effects, no IO, no global state).  
+
+Ex :
+```python
 {
-  "tokens": { "the": 523, "king": 41 },
+  "tokens": {"the": 523, "king": 41},
+  "ngrams": {"to_be": 18},
   "structure": {
-      "sentences": 123,
-      "paragraphs": 14
-  },
-  "ngrams": { "to_be": 18 }
+    "sentences": 123,
+    "paragraphs": 14
+  }
 }
-````
-#### Deterministic Guarantees
-* Same text → same frequencies
-* Same tokenizer settings → identical EDA layers
-* No randomness ; fully reproducible
+```
 
+### 4️⃣ Determinism Guarantees
 
-### 4. Usage Examples
-#### Token Frequencies
+This layer is **fully deterministic** :
+* Same input text → same output
+* Same tokenizer rules → identical results
+* No randomness
+* No seeding required
+
+This guarantees :
+* reproducibility
+* test stability
+* QA-friendly behavior
+
+### 5️⃣ Usage Examples
+
+**Token Frequencies**
 ```python
 from eda.token_stats import compute_frequencies
+
 freqs = compute_frequencies("To be, or not to be.")
 ```
-#### Structural Decomposition
+**Structural Analysis**
 ```python
 from eda.structures import analyze_structure
+
 info = analyze_structure(text)
 ```
-#### Visual Prep
+**Visualization Preparation**
 ```python
 from eda.visual_prep import prep_wordcloud_data
+
 wc_data = prep_wordcloud_data(freqs)
 ```
 
+### 6️⃣ Testing & Validation
 
-### 5. Error Model
-| Code   | Error Type             | Trigger                     |
-| ------ | ---------------------- | --------------------------- |
-| EDA-01 | InvalidInputError      | Non-string or empty input   |
-| EDA-02 | TokenizationError      | Failure during segmentation |
-| EDA-03 | StatsComputationError  | Bad intermediate state      |
-| EDA-04 | VisualizationPrepError | Data shape mismatch         |
+All EDA primitives are covered by unit tests.
 
+Validation includes :
+* frequency correctness
+* structural integrity
+* output shape consistency
+* regression stability
 
-### 6. Test Execution
+Run tests :
 ```bash
 pytest -q scripts/eda
 ```
-Coverage includes :
-* Token stats correctness
-* Structural integrity checks
-* Wordcloud/chart prep outputs
 
+### 7️⃣ Relationship to Other Layers
 
-### 7. Promotion Rules
-A new EDA feature becomes stable when :
-1. Outputs are deterministic
-2. It is used by ≥1 other module
-3. Schema remains backward compatible
-4. Tests cover frequency, structure and shape checks
+**Feeds** :
+  * Fate Engine
+  * narrative artifacts (indirectly)
+  * exploratory notebooks
 
+**Does not depend on** :
+  * artifacts layer
+  * runtime scripts
+  * scoring logic
 
-### 8. Compatibility Notes
+EDA is intentionally **downstream-agnostic**.
+
+### 8️⃣ Future Extensions (Planned)
+
+**This layer is designed to evolve toward** :  
+* richer structural models (acts, scenes, speakers)
+* symbolic density metrics
+* emotion / motif frequency layers
+* artifact-backed EDA persistence
+* cross-text comparative analysis
+* dataset-level aggregation
+
+**Future versions may expose** :  
+* reusable EDA snapshots
+* schema-validated analytical outputs
+* API-friendly EDA endpoints
+
+### 9️⃣ Compatibility Notes
 * Python ≥ 3.10
-* UTF-8 normalized processing
-* Tokenization is dependency-free (standard library only)
+* UTF-8 normalized text processing
+* Standard library only (no external NLP dependencies)
 
+### 1️⃣0️⃣ Glossary
+**EDA Layer**  
+Deterministic analytical view of a text.  
+**Feature**  
+A quantitative signal derived from raw text.  
+**Structure**  
+Logical decomposition of narrative text.  
+**Determinism**  
+Identical inputs always produce identical outputs.  
 
-### 9. Glossary
-**EDA Layer** : Analytical map/layer describing text.  
-**Feature Builder** : EDA output feeding a downstream system.  
-**Segmentation** : Splitting text into meaningful structural blocks.  
-
-
----
