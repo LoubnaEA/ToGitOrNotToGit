@@ -109,6 +109,8 @@ For full runtime context, see **`scripts/playground/run_artifacts.py`** to execu
 * **Code :** [spanish_tragedy.py](../scripts/artifacts/spanish_tragedy.py)  
 * **Test :** `python scripts/playground/test_artifacts_loader.py --name SpanishTragedy`
 
+---
+
 ### Testing & Validation
 All narrative artifacts are covered by executable tests.
 
