@@ -98,9 +98,11 @@ Shakespeare subset QA checklist : [QA_checklist_shakespeare.md](data/processed/Q
 
 ### ✨ Columns
 
-#### Core Columns (17)
+#### Core Columns (18)
 - **character**, aka Creature, primary identifier of the dramatic persona
-- **author**, linked to the corresponding `Author_ID` in `creators.md`    
+- **author**, linked to the corresponding `Author_ID` in `creators.md`
+- **tier**, categorical indicator of the author’s analytical weight and corpus depth within the dataset  
+    - `A` = core canon, `B` = structuring pillars, `C` = contextual ecosystem
 - **play**, title of the dramatic work in which the character appears (`Play_ID`)   
 - **dramatic_function**, (5) structural role in the narrative : 
     - Protagonist, Villain, Transgressor, Outcast / Marginal, Symbolic / Metaphysical Figure 
@@ -140,8 +142,8 @@ These columns remain optional or expandable fields for advanced or derived analy
 The dataset was manually curated and structured, defining relevant columns, ensuring consistent formatting and preparing the data for EDA and visualization.  
 Below is a sample from the cleaned `creatures_clean.csv`, produced after data wrangling, validation and alphabetical sorting by character name. The full dataset is available in **data/processed/creatures_clean.csv**
 
-| character        | author               | play                   | dramatic_function    | archetype          | dominant_traits             | variables                          | gender | social_status | human_or_not | visual_motifs           | number_of_characters_in_play | role_importance | interacts_with                 | speech_length | death_status | costume_props        | introduction_scene | gender_performance | moral_alignment | notes                               |
-|------------------|----------------------|------------------------|----------------------|--------------------|-----------------------------|------------------------------------|--------|--------------|--------------|-------------------------|-----------------------------|-----------------|-------------------------------|---------------|--------------|----------------------|--------------------|--------------------|------------------|------------------------------------|
+| character        | author         | tier          | play                   | dramatic_function    | archetype          | dominant_traits             | variables                          | gender | social_status | human_or_not | visual_motifs           | number_of_characters_in_play | role_importance | interacts_with                 | speech_length | death_status | costume_props        | introduction_scene | gender_performance | moral_alignment | notes                               |
+|------------------|----------------------|-------------------------|--------------|----------------------|--------------------|-----------------------------|------------------------------------|--------|--------------|--------------|-------------------------|-----------------------------|-----------------|-------------------------------|---------------|--------------|----------------------|--------------------|--------------------|------------------|------------------------------------|
 
 
 ---
