@@ -10,9 +10,10 @@ This checklist ensures **quality, consistency and completeness** for Shakespeare
 |-----------|------|----------------|----------------------------|----------|
 | Hamlet | Hamlet | [ ] character | [ ] moral_alignment | |
 |  |  | [ ] author | [ ] death_status_encoded | |
-|  |  | [ ] play | [ ] costume_props | |
-|  |  | [ ] dramatic_function | [ ] introduction_scene | |
-|  |  | [ ] archetype | [ ] gender_performance | |
+|  |  | [ ] tier | [ ] costume_props | |
+|  |  | [ ] play | [ ] introduction_scene | |
+|  |  | [ ] dramatic_function | [ ] gender_performance | |
+|  |  | [ ] archetype |  | |
 |  |  | [ ] dominant_traits |  | |
 |  |  | [ ] variables |  | |
 |  |  | [ ] gender |  | |
