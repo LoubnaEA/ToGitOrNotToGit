@@ -79,8 +79,8 @@ The **QA checklist** ensures the reliability of the `creatures.md` dataset by pr
 * Each checklist item indicates whether it is **automatically verifiable via scripts/EDA** or **requires manual review**.
 * For initial population, starting with **Shakespeare (~ 18–20 characters)** allows iterative validation before scaling to the full dataset.
 
-Full dataset QA checklist : [QA_checklist.md](data/processed/QA_checklist.md)  
-Shakespeare subset QA checklist : [QA_checklist_shakespeare.md](data/processed/QA_checklist_shakespeare.md)
+Full dataset QA checklist : [creatures_QA_checklist.md](data/processed/creatures_QA_checklist.md)  
+Shakespeare subset QA checklist : [creatures_QA_checklist_shakespeare.md](data/processed/creatures_QA_checklist_shakespeare.md)
 
 ### ✨ Creators by Tier
 
