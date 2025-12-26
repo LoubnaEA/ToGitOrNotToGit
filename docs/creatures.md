@@ -53,7 +53,7 @@ The dataset is designed to allow both **EDA**, **graph/network analysis** and **
 
 ### ✨ QA Checklist & EDA for Dataset Integrity
  
-The **✅ QA checklist** ensures the reliability of the `creatures.md` dataset by providing a framework for quantitative and qualitative verification, covering individual character entries, relational links, categorical attributes.
+The **QA checklist** ensures the reliability of the `creatures.md` dataset by providing a framework for quantitative and qualitative verification, covering individual character entries, relational links, categorical attributes.
 
 #### Purpose
 * Guarantee **structural consistency** : all core fields present and properly typed.
@@ -62,12 +62,13 @@ The **✅ QA checklist** ensures the reliability of the `creatures.md` dataset b
 * Support reproducible exploratory analysis and visualization.
 
 #### Verification Methods
-1. **Automated / EDA checks**
+✅ **Automated / EDA checks**
    * Completeness of mandatory columns : `character`, `author`, `play`, `dramatic_function`, etc.
    * Data types and categorical normalization (`gender`, `social_status`, `archetype`)
    * Distribution checks : speech length, role importance, number of characters per play.
    * Basic relational integrity : counts per author, per play, cross-checks for duplicates.
-2. **Manual / Contextual checks**
+
+✅ **Manual / Contextual checks**
    * Narrative consistency : verifying character archetypes, moral alignment, dramatic function.
    * Interactions : validation of `interacts_with` relationships.
    * Special or symbolic entities : ensuring correct classification of marginal, spectral or metaphysical characters.
