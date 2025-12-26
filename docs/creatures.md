@@ -14,8 +14,8 @@ Each record represents a character entity, structured to balance literary nuance
 - **Number of authors :** 20 core dramatists `creators.md`
 - **Estimated total characters :** ~ 210
 - **Unit of analysis :** One *creature* (character) per row 
-- **Plays covered :** ~ 50–60
-- **Characters per play :** 5–15 (up to 20+ in major works)
+- **Plays covered :** ~ 50-60
+- **Characters per play :** 5-15 (up to 20+ in major works)
 - **Dataset purpose :** Serve as a pivot between **authors** and **stage personas**, enabling quantitative and qualitative analyses of character, plot, and theatrical archetypes
 - **Relational scope :** linked by `Creator_ID`, `Play_ID`, `Character_ID`  
 
@@ -28,10 +28,10 @@ A flexible framework adaptable to database, graph, visualization models.
 
 1. **Tiered Author Approach**   
    * **Tier A** 🔴 (Primary authors, major influence) : Jonson, Marlowe, Shakespeare, etc.   
-     → Most characters (~ 170–180) come from these authors.  
+     → Most characters (~ 170-180) come from these authors.  
    * **Tier B** 🟠 (Supporting authors, smaller but significant corpus) : Beaumont, Fletcher, Ford, etc.    
      → ~ 30–40 characters.  
-   * **Tier C** 🟡 (Minor or peripheral authors) : Only key characters for coverage (~ 5–10).
+   * **Tier C** 🟡 (Minor or peripheral authors) : Only key characters for coverage (~ 5-10).
 
 2. **Character Selection**   
    * Prioritized **central and semi-central characters** : Protagonist, Villain, Tragic Hero, Revenger.
@@ -77,7 +77,7 @@ The **QA checklist** ensures the reliability of the `creatures.md` dataset by pr
 #### Implementation Notes
 * The QA checklist is maintained in `data/processed/QA_checklist.md`  
 * Each checklist item indicates whether it is **automatically verifiable via scripts/EDA** or **requires manual review**.
-* For initial population, starting with **Shakespeare (~ 18–20 characters)** allows iterative validation before scaling to the full dataset.
+* For initial population, starting with **Shakespeare (~ 18-20 characters)** allows iterative validation before scaling to the full dataset.
 
 Full dataset QA checklist : [creatures_QA_checklist.md](https://github.com/LoubnaEA/ToGitOrNotToGit/blob/main/data/processed/creatures_QA_checklist.md)  
 Shakespeare subset QA checklist : [creatures_QA_checklist_shakespeare.md](https://github.com/LoubnaEA/ToGitOrNotToGit/blob/main/data/processed/creatures_QA_checklist_shakespeare.md)
@@ -140,7 +140,8 @@ These columns remain optional or expandable fields for advanced or derived analy
 ### ✨ Sample from the Cleaned Dataset
 
 The dataset was manually curated and structured, defining relevant columns, ensuring consistent formatting and preparing the data for EDA and visualization.  
-Below is a sample from the cleaned `creatures_clean.csv`, produced after data wrangling, validation and alphabetical sorting by character name. The full dataset is available in **data/processed/creatures_clean.csv**
+Below is a sample from the cleaned `creatures_clean.csv`, produced after data wrangling, validation and alphabetical sorting by character name.   
+The full dataset is available in **data/processed/creatures_clean.csv**  
 
 | character        | author         | tier          | play                   | dramatic_function    | archetype          | dominant_traits             | variables                          | gender | social_status | human_or_not | visual_motifs           | number_of_characters_in_play | role_importance | interacts_with                 | speech_length | death_status | costume_props        | introduction_scene | gender_performance | moral_alignment | notes                               |
 |------------------|----------------------|-------------------------|--------------|----------------------|--------------------|-----------------------------|------------------------------------|--------|--------------|--------------|-------------------------|-----------------------------|-----------------|-------------------------------|---------------|--------------|----------------------|--------------------|--------------------|------------------|------------------------------------|
