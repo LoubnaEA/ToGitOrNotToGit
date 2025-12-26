@@ -51,6 +51,36 @@ A flexible framework adaptable to database, graph, visualization models.
 5. **Analytical Flexibility**  
 The dataset is designed to allow both **EDA**, **graph/network analysis** and **visualizations** (e.g., character networks, archetype distributions, gender representation).
 
+### ✨ QA Checklist & EDA for Dataset Integrity
+ 
+The **✅ QA checklist** ensures the reliability of the `creatures.md` dataset by providing a framework for quantitative and qualitative verification, covering individual character entries, relational links, categorical attributes.
+
+#### Purpose
+* Guarantee **structural consistency** : all core fields present and properly typed.
+* Ensure **narrative and analytical correctness** : roles, archetypes, moral alignment, interactions.
+* Enable **traceability** : character ↔ play ↔ author alignment.
+* Support reproducible exploratory analysis and visualization.
+
+#### Verification Methods
+1. **Automated / EDA checks**
+   * Completeness of mandatory columns : `character`, `author`, `play`, `dramatic_function`, etc.
+   * Data types and categorical normalization (`gender`, `social_status`, `archetype`)
+   * Distribution checks : speech length, role importance, number of characters per play.
+   * Basic relational integrity : counts per author, per play, cross-checks for duplicates.
+2. **Manual / Contextual checks**
+   * Narrative consistency : verifying character archetypes, moral alignment, dramatic function.
+   * Interactions : validation of `interacts_with` relationships.
+   * Special or symbolic entities : ensuring correct classification of marginal, spectral or metaphysical characters.
+   * Coverage of key characters per play and per author, especially for Tier A authors (e.g., Shakespeare).
+
+#### Implementation Notes
+* The QA checklist is maintained in `data/processed/QA_checklist.md`  
+* Each checklist item indicates whether it is **automatically verifiable via scripts/EDA** or **requires manual review**.
+* For initial population, starting with **Shakespeare (~ 18–20 characters)** allows iterative validation before scaling to the full dataset.
+
+Full dataset QA checklist : [QA_checklist.md](data/processed/QA_checklist.md)  
+Shakespeare subset QA checklist : [QA_checklist_shakespeare.md](data/processed/QA_checklist_shakespeare.md)
+
 ### ✨ Creators by Tier
 
 **Tier A 🔴 Core Canon** (4 authors) : Ben **Jonson**, Christopher **Marlowe**, John **Webster**, William **Shakespeare**         
