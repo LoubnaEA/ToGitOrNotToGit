@@ -1,6 +1,6 @@
-# ✨ QA_Checklist_shakespeare (Tier A)
+# ✨ creatures_QA_checklist_shakespeare
 
-This checklist ensures **quality, consistency and completeness** for Shakespeare characters (~ 18–20 per play).  
+This checklist ensures **quality, consistency and completeness** for Shakespeare characters (~ 18-20 per play).  
 
 ---
 
@@ -28,10 +28,10 @@ This checklist ensures **quality, consistency and completeness** for Shakespeare
 |  |  | [ ] notes |  | |
 
 ### Usage
-1. **One row per character**.
-2. Tick `[ ]` each box once the field is verified and complete.
-3. Use **Comments** for missing information or special remarks.
-4. Repeat for each Shakespeare character before moving to other authors.
+1. **One row per character**
+2. Tick `[ ]` each box once the field is verified and complete
+3. Use **Comments** for missing information or special remarks
+4. Repeat for each Shakespeare character before moving to other authors
 
 ### Example Filled
 
