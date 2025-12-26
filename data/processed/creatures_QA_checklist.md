@@ -1,4 +1,4 @@
-# ✨ QA_checklist 
+# ✨ creatures_QA_checklist 
 
 This checklist is designed to ensure **quality, consistency, completeness** of the **`creatures.md`** dataset.  
 It is structured for **initial population (Shakespeare)** and for **full dataset QA**.  
@@ -16,8 +16,8 @@ It is structured for **initial population (Shakespeare)** and for **full dataset
 ## 2️⃣ Line Structure, Creature Entry
 
 - [ ] Each row represents **one character**.
-- [ ] Core columns present (17 total) :
-  - `character`, `author`, `play`, `dramatic_function`, `archetype`, `dominant_traits`, `variables`, `gender`, `social_status`, `human_or_not`, `visual_motifs`, `number_of_characters_in_play`, `role_importance`, `interacts_with`, `speech_length`, `death_status`, `notes`
+- [ ] Core columns present (18 total) :
+  - `character`, `author`, `tier`, `play`, `dramatic_function`, `archetype`, `dominant_traits`, `variables`, `gender`, `social_status`, `human_or_not`, `visual_motifs`, `number_of_characters_in_play`, `role_importance`, `interacts_with`, `speech_length`, `death_status`, `notes`
 - [ ] Reserve/advanced columns present (5 total) :
   - `moral_alignment`, `death_status_encoded`, `costume_props`, `introduction_scene`, `gender_performance`
 - [ ] No empty mandatory fields in core columns
@@ -50,7 +50,7 @@ It is structured for **initial population (Shakespeare)** and for **full dataset
 
 ### 6️⃣ QA Steps for Shakespeare (Tier A)
 
-- [ ] Populate all main plays (~ 18–20 characters per play)  
+- [ ] Populate all main plays (~ 18-20 characters per play)  
 - [ ] Verify all character rows adhere to structure  
 - [ ] Apply all Core and Reserve columns  
 - [ ] Check alignment with `creators.md` (Shakespeare)  
@@ -60,7 +60,7 @@ It is structured for **initial population (Shakespeare)** and for **full dataset
 ### 7️⃣ QA Steps for Full Dataset
 
 - [ ] Repeat Shakespeare QA for all **Tier A** authors  
-- [ ] Populate **Tier B** (~ 30–40 characters total), validate all fields  
+- [ ] Populate **Tier B** (~ 30-40 characters total), validate all fields  
 - [ ] Populate **Tier C** (key characters only), validate all fields  
 - [ ] Check total character count (~ 210)  
 - [ ] Ensure uniform column structure and formatting across dataset  
