@@ -90,10 +90,6 @@ This table serves as the **metadata layer** for **author-to-character relationsh
 
 ---
 
-🎭 creators.md → who writes  
-✨ creatures.md → who acts  
-🗣️ dark_stage.md → where transgression unfolds  
-
-
-
-
+🎭 `creators.md` → who writes   
+✨ [creatures.md](https://github.com/LoubnaEA/ToGitOrNotToGit/edit/main/docs/creatures.md) → who acts   
+🗣️ [dark_stage.md](https://github.com/LoubnaEA/ToGitOrNotToGit/blob/main/docs/dark_stage.md) → where transgression unfolds   
