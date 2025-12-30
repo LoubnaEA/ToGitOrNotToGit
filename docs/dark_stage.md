@@ -120,6 +120,6 @@ flowchart LR
 
 ---
 
-🎭 `creators.md` → who writes   
-✨ `creatures.md` → who acts   
+🎭 [creators.md](https://github.com/LoubnaEA/ToGitOrNotToGit/blob/main/docs/creators.md) → who writes   
+✨ [creatures.md](https://github.com/LoubnaEA/ToGitOrNotToGit/edit/main/docs/creatures.md) → who acts   
 🗣️ `dark_stage.md` → where transgression unfolds   
