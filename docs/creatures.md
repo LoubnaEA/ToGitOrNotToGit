@@ -149,6 +149,6 @@ The full dataset is available in **data/processed/creatures_clean.csv**
 
 ---
 
-🎭 `creators.md` → who writes   
+🎭 [creators.md](https://github.com/LoubnaEA/ToGitOrNotToGit/blob/main/docs/creators.md) → who writes   
 ✨ `creatures.md` → who acts   
-🗣️ `dark_stage.md` → where transgression unfolds   
+🗣️ [dark_stage.md](https://github.com/LoubnaEA/ToGitOrNotToGit/blob/main/docs/dark_stage.md) → where transgression unfolds   
