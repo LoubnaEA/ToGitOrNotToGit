@@ -90,7 +90,7 @@ Shakespeare subset QA checklist : [creatures_QA_checklist_shakespeare.md](https:
 
 **Tier B 🟠 Structuring Pillars** (6 authors) : Francis **Beaumont**, John **Fletcher**, John **Ford**, Thomas **Kyd**, Philip **Massinger**, Thomas **Middleton**    
 - Strong depth, solid comparisons, less exhaustive.      
-- Key genres such as revenge, tragicomedy and moral tragedy; bridging the Elizabethan and Jacobean periods.   
+- Key genres such as revenge, tragicomedy and moral tragedy ; bridging the Elizabethan and Jacobean periods.   
 
 **Tier C 🟡 Context & Ecosystem** (10 authors) : George **Chapman**, Thomas **Dekker**, Thomas **Heywood**, Robert **Greene**, John **Lyly**, Thomas **Nashe**, John **Marston**, George **Peele**, James **Shirley**, William **Rowley**  
 - Minimal coverage, network role, without overloading.     
@@ -98,7 +98,7 @@ Shakespeare subset QA checklist : [creatures_QA_checklist_shakespeare.md](https:
 
 ### ✨ Columns
 
-#### Core Columns (18)
+#### Core Columns (19)
 - **character**, aka Creature, primary identifier of the dramatic persona
 - **author**, linked to the corresponding `Author_ID` in `creators.md`
 - **tier**, categorical indicator of the author’s analytical weight and corpus depth within the dataset  
@@ -117,6 +117,8 @@ Shakespeare subset QA checklist : [creatures_QA_checklist_shakespeare.md](https:
 - **social_status** :
   	- Noble, Commoner, Servant, Marginal, Supernatural     
 - **human_or_not**, distinguishes mortal from spectral, allegorical or divine entities      
+- **moral_alignment**, ethical position within the narrative world
+    - Virtuous, Ambivalent, Corrupt, etc.
 - **visual_motifs**, set of symbolic emojis from the shared legend (🎭👑💀🩸🗡️🔥🕷️…)       
 - **number_of_characters_in_play**, contextual density of the dramatic environment                  
 - **role_importance**, relative narrative weight
@@ -125,13 +127,11 @@ Shakespeare subset QA checklist : [creatures_QA_checklist_shakespeare.md](https:
 - **speech_length**, quantitative indicator of presence                  
 - **death_status**, fate of the character :
     - Survives, Dies, Transformed, Unknown
-- **notes**
+- **notes**, optional observations
 
-#### Reserve Columns (5)
+#### Reserve Columns (4)
 These columns remain optional or expandable fields for advanced or derived analysis :
 
-- **moral_alignment**, ethical position within the narrative world
-    - Virtuous, Ambivalent, Corrupt, etc.
 - **death_status**, encoded categorical outcome (e.g. `0=alive`, `1=dead`) 
 - **costume_props**, stage appearance and symbolic material culture
 - **introduction_scene**, narrative positioning of first entry, for structural mapping and act-based analytics    
